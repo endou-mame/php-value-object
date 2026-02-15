@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection\Base;
+namespace EndouMame\PhpValueObject\Collection\Base;
 
 use Override;
 
 /**
  * Default implementation of ICollection
- * @see WizDevelop\PhpValueObject\Collection\Base\ICollection
+ * @see EndouMame\PhpValueObject\Collection\Base\ICollection
  * @template TKey
  * @template TValue
  */

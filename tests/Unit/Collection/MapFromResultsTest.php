@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Collection;
+namespace EndouMame\PhpValueObject\Tests\Unit\Collection;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Collection\Map;
-use WizDevelop\PhpValueObject\Collection\Pair;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Number\IntegerValue;
-use WizDevelop\PhpValueObject\String\StringValue;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Collection\Map;
+use EndouMame\PhpValueObject\Collection\Pair;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Number\IntegerValue;
+use EndouMame\PhpValueObject\String\StringValue;
 
 #[TestDox('Map::tryFromResults メソッドのテスト')]
 #[CoversClass(Map::class)]

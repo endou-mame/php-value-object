@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Number\Integer;
+namespace EndouMame\PhpValueObject\Tests\Unit\Number\Integer;
 
 use AssertionError;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -12,11 +12,11 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
 use Throwable;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Examples\Number\Integer\TestNegativeIntegerValue;
-use WizDevelop\PhpValueObject\Examples\Number\Integer\TestPositiveIntegerValue;
-use WizDevelop\PhpValueObject\Number\NegativeIntegerValue;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Number\Integer\TestNegativeIntegerValue;
+use EndouMame\PhpValueObject\Examples\Number\Integer\TestPositiveIntegerValue;
+use EndouMame\PhpValueObject\Number\NegativeIntegerValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * NegativeIntegerValue抽象クラスのテスト

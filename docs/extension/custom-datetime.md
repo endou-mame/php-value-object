@@ -17,8 +17,8 @@ LocalDate、LocalTime、LocalDateTime を継承または組み合わせてカス
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\DateTime\LocalDate;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\DateTime\LocalDate;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 use DateTimeZone;
 
 #[ValueObjectMeta(name: '生年月日')]
@@ -134,7 +134,7 @@ final readonly class ExpirationDate extends LocalDate
 ### 営業時間
 
 ```php
-use WizDevelop\PhpValueObject\DateTime\LocalTime;
+use EndouMame\PhpValueObject\DateTime\LocalTime;
 
 #[ValueObjectMeta(name: '営業時間')]
 final readonly class BusinessHours
@@ -183,7 +183,7 @@ final readonly class BusinessHours
 ### 予約日時
 
 ```php
-use WizDevelop\PhpValueObject\DateTime\LocalDateTime;
+use EndouMame\PhpValueObject\DateTime\LocalDateTime;
 
 #[ValueObjectMeta(name: '予約日時')]
 final readonly class ReservationDateTime extends LocalDateTime
@@ -238,7 +238,7 @@ final readonly class ReservationDateTime extends LocalDateTime
 ### 契約期間
 
 ```php
-use WizDevelop\PhpValueObject\DateTime\LocalDateRange;
+use EndouMame\PhpValueObject\DateTime\LocalDateRange;
 
 #[ValueObjectMeta(name: '契約期間')]
 final readonly class ContractPeriod

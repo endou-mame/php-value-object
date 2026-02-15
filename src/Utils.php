@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject;
+namespace EndouMame\PhpValueObject;
 
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * @internal

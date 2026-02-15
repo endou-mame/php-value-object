@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Number\Integer;
+namespace EndouMame\PhpValueObject\Tests\Unit\Number\Integer;
 
 use DivisionByZeroError;
 use Error;
@@ -14,12 +14,12 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
 use Throwable;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Examples\Number\Integer\TestIntegerValue;
-use WizDevelop\PhpValueObject\Number\Integer\IntegerValueBase;
-use WizDevelop\PhpValueObject\Number\IntegerValue;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Number\Integer\TestIntegerValue;
+use EndouMame\PhpValueObject\Number\Integer\IntegerValueBase;
+use EndouMame\PhpValueObject\Number\IntegerValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * IntegerValue抽象クラスのテスト

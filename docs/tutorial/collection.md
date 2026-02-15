@@ -9,7 +9,7 @@
 ### 作成
 
 ```php
-use WizDevelop\PhpValueObject\Collection\ArrayList;
+use EndouMame\PhpValueObject\Collection\ArrayList;
 
 // 配列から作成
 $list = ArrayList::from([1, 2, 3, 4, 5]);
@@ -145,8 +145,8 @@ $groups = $list->mapToGroups(fn($v) => [$v % 2 => $v]);
 ### 作成
 
 ```php
-use WizDevelop\PhpValueObject\Collection\Map;
-use WizDevelop\PhpValueObject\Collection\Pair;
+use EndouMame\PhpValueObject\Collection\Map;
+use EndouMame\PhpValueObject\Collection\Pair;
 
 // 連想配列から作成
 $map = Map::make(['name' => 'John', 'age' => 30]);
@@ -231,7 +231,7 @@ $merged = $map->merge($other);
 キーと値のペアを表現する基本型です。
 
 ```php
-use WizDevelop\PhpValueObject\Collection\Pair;
+use EndouMame\PhpValueObject\Collection\Pair;
 
 // 作成
 $pair = Pair::of('name', 'John');
@@ -254,8 +254,8 @@ $array = $pair->toArray();
 値オブジェクトのコレクションを扱う特別な ArrayList です。値オブジェクトの等価性に基づいた操作を提供します。
 
 ```php
-use WizDevelop\PhpValueObject\ValueObjectList;
-use WizDevelop\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\ValueObjectList;
+use EndouMame\PhpValueObject\String\StringValue;
 
 $list = new ValueObjectList([
     StringValue::from('apple'),
@@ -286,8 +286,8 @@ $diff = $list->diff($other);
 コレクションは Result 型と統合されています。
 
 ```php
-use WizDevelop\PhpValueObject\Collection\ArrayList;
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\Collection\ArrayList;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 // 複数の Result から ArrayList を作成
 $results = [

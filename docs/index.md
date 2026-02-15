@@ -11,7 +11,7 @@ hero:
       link: /guide/
     - theme: alt
       text: GitHub
-      link: https://github.com/wiz-develop/php-value-object
+      link: https://github.com/endou-mame/php-value-object
 
 features:
   - icon: 🔒

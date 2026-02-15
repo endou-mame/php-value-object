@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\String;
+namespace EndouMame\PhpValueObject\String;
 
 use Override;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\String\Base\StringValueBase;
-use WizDevelop\PhpValueObject\String\Base\StringValueFactory;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\String\Base\StringValueBase;
+use EndouMame\PhpValueObject\String\Base\StringValueFactory;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 /**
  * メールアドレスの値オブジェクト

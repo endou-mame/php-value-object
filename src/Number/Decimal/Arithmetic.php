@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Decimal;
+namespace EndouMame\PhpValueObject\Number\Decimal;
 
 use DivisionByZeroError;
 use Override;
 use RoundingMode;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * Default implementation of IArithmetic
- * @see WizDevelop\PhpValueObject\Number\Decimal\IArithmetic
- * @see WizDevelop\PhpValueObject\Number\Decimal\DecimalValueBase
- * @see WizDevelop\PhpValueObject\Number\Decimal\IDecimalValueFactory
+ * @see EndouMame\PhpValueObject\Number\Decimal\IArithmetic
+ * @see EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase
+ * @see EndouMame\PhpValueObject\Number\Decimal\IDecimalValueFactory
  */
 trait Arithmetic
 {

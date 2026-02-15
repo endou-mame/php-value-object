@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Boolean;
+namespace EndouMame\PhpValueObject\Boolean;
 
 use Override;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Boolean\Base\BooleanValueBase;
-use WizDevelop\PhpValueObject\Boolean\Base\BooleanValueFactory;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Boolean\Base\BooleanValueBase;
+use EndouMame\PhpValueObject\Boolean\Base\BooleanValueFactory;
 
 /**
  * 真偽値の値オブジェクトの性質を提供する

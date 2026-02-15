@@ -7,8 +7,8 @@ PHP の Enum を値オブジェクトとして扱う方法について解説し�
 ### Enum の定義
 
 ```php
-use WizDevelop\PhpValueObject\Enum\IEnumValue;
-use WizDevelop\PhpValueObject\Enum\EnumValueObjectDefault;
+use EndouMame\PhpValueObject\Enum\IEnumValue;
+use EndouMame\PhpValueObject\Enum\EnumValueObjectDefault;
 
 enum Status: string implements IEnumValue
 {
@@ -36,7 +36,7 @@ $status = Status::tryFrom('active'); // Status::ACTIVE または null
 ### Result 型を使った作成
 
 ```php
-use WizDevelop\PhpValueObject\Enum\EnumValueFactory;
+use EndouMame\PhpValueObject\Enum\EnumValueFactory;
 
 // Result 型を返すファクトリ
 $result = Status::tryFrom2('active');
@@ -120,8 +120,8 @@ echo $error->getMessage();
 ### 注文ステータス
 
 ```php
-use WizDevelop\PhpValueObject\Enum\IEnumValue;
-use WizDevelop\PhpValueObject\Enum\EnumValueObjectDefault;
+use EndouMame\PhpValueObject\Enum\IEnumValue;
+use EndouMame\PhpValueObject\Enum\EnumValueObjectDefault;
 
 enum OrderStatus: string implements IEnumValue
 {

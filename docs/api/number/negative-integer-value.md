@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Number\NegativeIntegerValue
+EndouMame\PhpValueObject\Number\NegativeIntegerValue
 ```
 
 ## 継承関係

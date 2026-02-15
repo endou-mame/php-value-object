@@ -149,8 +149,8 @@ function validateProfile(array $data): Result
 ### isValid のオーバーライド
 
 ```php
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 #[ValueObjectMeta(name: 'パスワード')]
 final readonly class Password extends StringValue

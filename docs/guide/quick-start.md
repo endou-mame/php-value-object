@@ -7,7 +7,7 @@
 ### Boolean
 
 ```php
-use WizDevelop\PhpValueObject\Boolean\BooleanValue;
+use EndouMame\PhpValueObject\Boolean\BooleanValue;
 
 // 作成
 $bool = BooleanValue::from(true);
@@ -28,8 +28,8 @@ $result = $true->not();       // false
 ### String
 
 ```php
-use WizDevelop\PhpValueObject\String\StringValue;
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 // 基本的な文字列
 $str = StringValue::from("Hello, World!");
@@ -45,8 +45,8 @@ if ($result->isOk()) {
 ### Number
 
 ```php
-use WizDevelop\PhpValueObject\Number\Integer\IntegerValue;
-use WizDevelop\PhpValueObject\Number\Decimal\DecimalValue;
+use EndouMame\PhpValueObject\Number\Integer\IntegerValue;
+use EndouMame\PhpValueObject\Number\Decimal\DecimalValue;
 use BcMath\Number;
 
 // 整数値
@@ -64,9 +64,9 @@ $int->isNegative(); // false
 ### DateTime
 
 ```php
-use WizDevelop\PhpValueObject\DateTime\LocalDate;
-use WizDevelop\PhpValueObject\DateTime\LocalTime;
-use WizDevelop\PhpValueObject\DateTime\LocalDateTime;
+use EndouMame\PhpValueObject\DateTime\LocalDate;
+use EndouMame\PhpValueObject\DateTime\LocalTime;
+use EndouMame\PhpValueObject\DateTime\LocalDateTime;
 use DateTimeZone;
 
 // 日付
@@ -89,8 +89,8 @@ $date->isBefore($tomorrow); // true
 ### Collection
 
 ```php
-use WizDevelop\PhpValueObject\Collection\ArrayList;
-use WizDevelop\PhpValueObject\Collection\Map;
+use EndouMame\PhpValueObject\Collection\ArrayList;
+use EndouMame\PhpValueObject\Collection\Map;
 
 // ArrayList
 $list = ArrayList::from([1, 2, 3, 4, 5]);
@@ -108,7 +108,7 @@ $updated = $map->put('age', 31);
 ### Result 型の使い方
 
 ```php
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 $result = EmailAddress::tryFrom($userInput);
 
@@ -130,7 +130,7 @@ $email = $result->match(
 ### Option 型の使い方
 
 ```php
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 $option = EmailAddress::fromNullable($maybeNull);
 
@@ -152,8 +152,8 @@ $emailOrNull = $option->unwrapOrNull();
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\String\StringValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '商品コード')]
 final readonly class ProductCode extends StringValue

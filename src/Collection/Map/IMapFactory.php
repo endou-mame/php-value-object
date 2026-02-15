@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection\Map;
+namespace EndouMame\PhpValueObject\Collection\Map;
 
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Collection\Pair;
-use WizDevelop\PhpValueObject\Error\IErrorValue;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Collection\Pair;
+use EndouMame\PhpValueObject\Error\IErrorValue;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * マップコレクション ファクトリインターフェース
- * @see WizDevelop\PhpValueObject\Collection\Map
+ * @see EndouMame\PhpValueObject\Collection\Map
  *
  * @template TKey
  * @template TValue

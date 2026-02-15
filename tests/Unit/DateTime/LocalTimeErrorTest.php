@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\DateTime;
+namespace EndouMame\PhpValueObject\Tests\Unit\DateTime;
 
 use AssertionError;
 use DateTimeImmutable;
@@ -11,8 +11,8 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
-use WizDevelop\PhpValueObject\DateTime\LocalTime;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpValueObject\DateTime\LocalTime;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * LocalTimeクラスの異常系テスト

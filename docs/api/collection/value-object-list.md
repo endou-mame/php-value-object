@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\ValueObjectList
+EndouMame\PhpValueObject\ValueObjectList
 ```
 
 ## 継承関係

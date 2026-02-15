@@ -5,7 +5,7 @@ ULID (Universally Unique Lexicographically Sortable Identifier) を扱う値オ�
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\String\Ulid
+EndouMame\PhpValueObject\String\Ulid
 ```
 
 ## 継承関係

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\DateTime;
+namespace EndouMame\PhpValueObject\DateTime;
 
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
 use Override;
 use Stringable;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\IValueObject;
-use WizDevelop\PhpValueObject\Utils;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\IValueObject;
+use EndouMame\PhpValueObject\Utils;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 /**
  * @phpstan-type Year int<LocalDate::MIN_YEAR, LocalDate::MAX_YEAR>

@@ -27,8 +27,8 @@ IntegerValue や DecimalValue を継承してカスタム数値値オブジェ�
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\Number\IntegerValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Number\IntegerValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '年齢')]
 final readonly class Age extends IntegerValue
@@ -153,8 +153,8 @@ final readonly class Rating extends IntegerValue
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\Number\Decimal\PositiveDecimalValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Number\Decimal\PositiveDecimalValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 use BcMath\Number;
 
 #[ValueObjectMeta(name: '価格')]

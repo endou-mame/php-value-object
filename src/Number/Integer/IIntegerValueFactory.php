@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Integer;
+namespace EndouMame\PhpValueObject\Number\Integer;
 
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * 整数の値オブジェクト ファクトリインターフェース
- * @see WizDevelop\PhpValueObject\Number\Integer\IntegerValueFactory
+ * @see EndouMame\PhpValueObject\Number\Integer\IntegerValueFactory
  */
 interface IIntegerValueFactory
 {

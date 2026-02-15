@@ -9,8 +9,8 @@ ArrayList や Map を継承してカスタムコレクション値オブジェ�
 特定の型のみを許容するリストを作成できます。
 
 ```php
-use WizDevelop\PhpValueObject\Collection\ArrayList;
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\Collection\ArrayList;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 /**
  * メールアドレスのリスト
@@ -73,8 +73,8 @@ echo $list->toCommaSeparated();
 ### 要素数制限付きリスト
 
 ```php
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * 最大10件のタグリスト
@@ -235,7 +235,7 @@ final readonly class TranslationDictionary extends Map
 ### ユーザー ID リスト
 
 ```php
-use WizDevelop\PhpValueObject\ValueObjectList;
+use EndouMame\PhpValueObject\ValueObjectList;
 
 /**
  * ユーザー ID のリスト

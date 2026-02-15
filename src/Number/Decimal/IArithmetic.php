@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Decimal;
+namespace EndouMame\PhpValueObject\Number\Decimal;
 
 use RoundingMode;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * 算術演算可能な少数の値オブジェクト

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Collection;
+namespace EndouMame\PhpValueObject\Tests\Unit\Collection;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Collection\ArrayList;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Number\IntegerValue;
-use WizDevelop\PhpValueObject\String\StringValue;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Collection\ArrayList;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Number\IntegerValue;
+use EndouMame\PhpValueObject\String\StringValue;
 
 #[TestDox('ArrayList::tryFromResults メソッドのテスト')]
 #[CoversClass(ArrayList::class)]

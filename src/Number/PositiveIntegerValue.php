@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number;
+namespace EndouMame\PhpValueObject\Number;
 
 use Override;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Number\Integer\IntegerValueBase;
-use WizDevelop\PhpValueObject\Number\Integer\IntegerValueFactory;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Number\Integer\IntegerValueBase;
+use EndouMame\PhpValueObject\Number\Integer\IntegerValueFactory;
 
 /**
  * 正の整数の値オブジェクト

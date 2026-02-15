@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\String\StringValue
+EndouMame\PhpValueObject\String\StringValue
 ```
 
 ## 継承関係
@@ -140,8 +140,8 @@ json_encode($str); // "\"Hello\""
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\String\StringValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '商品コード')]
 final readonly class ProductCode extends StringValue

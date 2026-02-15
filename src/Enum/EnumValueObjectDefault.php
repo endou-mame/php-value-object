@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Enum;
+namespace EndouMame\PhpValueObject\Enum;
 
 use Override;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\IValueObject;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\IValueObject;
 
 /**
  * 列挙型の値オブジェクトのデフォルト実装

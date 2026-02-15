@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit;
+namespace EndouMame\PhpValueObject\Tests\Unit;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
-use WizDevelop\PhpValueObject\IValueObject;
-use WizDevelop\PhpValueObject\Number\IntegerValue;
-use WizDevelop\PhpValueObject\String\StringValue;
-use WizDevelop\PhpValueObject\ValueObjectList;
+use EndouMame\PhpValueObject\IValueObject;
+use EndouMame\PhpValueObject\Number\IntegerValue;
+use EndouMame\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\ValueObjectList;
 
 #[TestDox('ValueObjectListクラスのテスト')]
 #[CoversClass(ValueObjectList::class)]

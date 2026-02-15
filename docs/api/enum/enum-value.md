@@ -5,9 +5,9 @@ PHP の Enum を値オブジェクトとして扱うためのトレイトとイ�
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Enum\IEnumValue
-WizDevelop\PhpValueObject\Enum\EnumValueObjectDefault
-WizDevelop\PhpValueObject\Enum\EnumValueFactory
+EndouMame\PhpValueObject\Enum\IEnumValue
+EndouMame\PhpValueObject\Enum\EnumValueObjectDefault
+EndouMame\PhpValueObject\Enum\EnumValueFactory
 ```
 
 ## 使い方
@@ -15,8 +15,8 @@ WizDevelop\PhpValueObject\Enum\EnumValueFactory
 PHP の Enum に `IEnumValue` インターフェースと `EnumValueObjectDefault` トレイトを使用します。
 
 ```php
-use WizDevelop\PhpValueObject\Enum\IEnumValue;
-use WizDevelop\PhpValueObject\Enum\EnumValueObjectDefault;
+use EndouMame\PhpValueObject\Enum\IEnumValue;
+use EndouMame\PhpValueObject\Enum\EnumValueObjectDefault;
 
 enum Status: string implements IEnumValue
 {

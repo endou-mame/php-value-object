@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Enum;
+namespace EndouMame\PhpValueObject\Enum;
 
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * 列挙型の値オブジェクト ファクトリインターフェース
  *
- * @see WizDevelop\PhpValueObject\Enum\EnumValueFactory
+ * @see EndouMame\PhpValueObject\Enum\EnumValueFactory
  */
 interface IEnumValueFactory
 {

@@ -9,7 +9,7 @@
 任意の整数値を扱う基本クラスです。
 
 ```php
-use WizDevelop\PhpValueObject\Number\Integer\IntegerValue;
+use EndouMame\PhpValueObject\Number\Integer\IntegerValue;
 
 // 作成
 $int = IntegerValue::from(42);
@@ -41,7 +41,7 @@ $negative->isNegative(); // true
 正の整数のみを扱う値オブジェクトです。
 
 ```php
-use WizDevelop\PhpValueObject\Number\Integer\PositiveIntegerValue;
+use EndouMame\PhpValueObject\Number\Integer\PositiveIntegerValue;
 
 // 正の整数のみ有効
 $positive = PositiveIntegerValue::from(42);
@@ -59,7 +59,7 @@ $result->isErr(); // true
 負の整数のみを扱う値オブジェクトです。
 
 ```php
-use WizDevelop\PhpValueObject\Number\Integer\NegativeIntegerValue;
+use EndouMame\PhpValueObject\Number\Integer\NegativeIntegerValue;
 
 // 負の整数のみ有効
 $negative = NegativeIntegerValue::from(-42);
@@ -76,7 +76,7 @@ $result->isErr(); // true
 BCMath を使用した高精度な小数値を扱います。
 
 ```php
-use WizDevelop\PhpValueObject\Number\Decimal\DecimalValue;
+use EndouMame\PhpValueObject\Number\Decimal\DecimalValue;
 use BcMath\Number;
 
 // BcMath\Number から作成
@@ -89,8 +89,8 @@ $value = $decimal->value; // BcMath\Number
 ### PositiveDecimalValue / NegativeDecimalValue
 
 ```php
-use WizDevelop\PhpValueObject\Number\Decimal\PositiveDecimalValue;
-use WizDevelop\PhpValueObject\Number\Decimal\NegativeDecimalValue;
+use EndouMame\PhpValueObject\Number\Decimal\PositiveDecimalValue;
+use EndouMame\PhpValueObject\Number\Decimal\NegativeDecimalValue;
 use BcMath\Number;
 
 // 正の小数
@@ -188,8 +188,8 @@ $a->equals($c); // false
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\Number\Integer\IntegerValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Number\Integer\IntegerValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '年齢')]
 final readonly class Age extends IntegerValue
@@ -221,8 +221,8 @@ $result->isErr(); // true (150超)
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\Number\Decimal\PositiveDecimalValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Number\Decimal\PositiveDecimalValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 use BcMath\Number;
 
 #[ValueObjectMeta(name: '価格')]

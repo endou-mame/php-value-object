@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\String\EmailAddress
+EndouMame\PhpValueObject\String\EmailAddress
 ```
 
 ## 継承関係

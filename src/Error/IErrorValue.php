@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Error;
+namespace EndouMame\PhpValueObject\Error;
 
 use Stringable;
-use WizDevelop\PhpValueObject\IValueObject;
+use EndouMame\PhpValueObject\IValueObject;
 
 /**
  * エラー値オブジェクト インターフェース

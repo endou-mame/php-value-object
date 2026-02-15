@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject;
+namespace EndouMame\PhpValueObject;
 
 use JsonSerializable;
 
 /**
  * すべての値オブジェクトの基底インターフェース
- * @see WizDevelop\PhpValueObject\ValueObjectDefault
+ * @see EndouMame\PhpValueObject\ValueObjectDefault
  */
 interface IValueObject extends JsonSerializable
 {

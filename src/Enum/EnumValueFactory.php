@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Enum;
+namespace EndouMame\PhpValueObject\Enum;
 
 use Override;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
 
 /**
  * Default implementation of IEnumValueFactory
- * @see WizDevelop\PhpValueObject\Enum\IEnumValueFactory
+ * @see EndouMame\PhpValueObject\Enum\IEnumValueFactory
  */
 trait EnumValueFactory
 {

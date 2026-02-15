@@ -58,7 +58,7 @@ cd docs && npm run textlint:fix
 ### 名前空間構造
 
 ```
-WizDevelop\PhpValueObject\
+EndouMame\PhpValueObject\
 ├── Boolean/     # BooleanValue
 ├── String/      # StringValue, EmailAddress, Ulid
 ├── Number/
@@ -91,5 +91,5 @@ final readonly class ProductCode extends StringValue
 
 ### 依存ライブラリ
 
-- `wiz-develop/php-monad` - Result/Option 型（エラーハンドリング）
-- `wiz-develop/php-cs-fixer-config` - コードスタイル設定
+- `endou-mame/php-monad` - Result/Option 型（エラーハンドリング）
+- `endou-mame/php-cs-fixer-config` - コードスタイル設定

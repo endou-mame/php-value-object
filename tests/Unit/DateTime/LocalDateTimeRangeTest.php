@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\DateTime;
+namespace EndouMame\PhpValueObject\Tests\Unit\DateTime;
 
 use DateTimeImmutable;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use WizDevelop\PhpValueObject\DateTime\LocalDateTime;
-use WizDevelop\PhpValueObject\DateTime\LocalDateTimeRange;
-use WizDevelop\PhpValueObject\DateTime\RangeType;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\DateTime\LocalDateTime;
+use EndouMame\PhpValueObject\DateTime\LocalDateTimeRange;
+use EndouMame\PhpValueObject\DateTime\RangeType;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 final class LocalDateTimeRangeTest extends TestCase
 {

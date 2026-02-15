@@ -5,10 +5,9 @@ parameters:
     paths:
         - src
         - tests
-        - examples
     typeAliases:
-        NumberValueBase: '\WizDevelop\PhpValueObject\Number\Decimal\DecimalValueBase|\WizDevelop\PhpValueObject\Number\Integer\IntegerValueBase'
-        DateTimeValueBase: '\WizDevelop\PhpValueObject\DateTime\LocalDate|\WizDevelop\PhpValueObject\DateTime\LocalTime|\WizDevelop\PhpValueObject\DateTime\LocalDateTime'
+        NumberValueBase: '\EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase|\EndouMame\PhpValueObject\Number\Integer\IntegerValueBase'
+        DateTimeValueBase: '\EndouMame\PhpValueObject\DateTime\LocalDate|\EndouMame\PhpValueObject\DateTime\LocalTime|\EndouMame\PhpValueObject\DateTime\LocalDateTime'
     ignoreErrors:
         -
             # NOTE: PHP-CS-Fixer のルールと競合するため

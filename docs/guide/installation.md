@@ -9,23 +9,23 @@
 Composer を使用してインストールできます。
 
 ```bash
-composer require wiz-develop/php-value-object
+composer require endou-mame/php-value-object
 ```
 
 ## 依存ライブラリ
 
 このライブラリは以下のライブラリに依存しています。
 
-### wiz-develop/php-monad
+### endou-mame/php-monad
 
 `Result` 型や `Option` 型を提供するモナドライブラリです。値オブジェクトのファクトリメソッド (`tryFrom` など) が返す `Result` 型はこのライブラリで定義されています。
 
 ```bash
 # php-value-object をインストールすると自動的にインストールされます
-composer require wiz-develop/php-monad
+composer require endou-mame/php-monad
 ```
 
-詳細は [php-monad のドキュメント](https://github.com/wiz-develop/php-monad) を参照してください。
+詳細は [php-monad のドキュメント](https://github.com/endou-mame/php-monad) を参照してください。
 
 ## 開発環境のセットアップ
 
@@ -41,7 +41,7 @@ composer require wiz-develop/php-monad
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/wiz-develop/php-value-object.git
+git clone https://github.com/endou-mame/php-value-object.git
 cd php-value-object
 
 # 依存関係をインストール

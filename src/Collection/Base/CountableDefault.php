@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection\Base;
+namespace EndouMame\PhpValueObject\Collection\Base;
 
 use Override;
 

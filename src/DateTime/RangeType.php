@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\DateTime;
+namespace EndouMame\PhpValueObject\DateTime;
 
 /**
  * 期間の境界タイプを表す列挙型

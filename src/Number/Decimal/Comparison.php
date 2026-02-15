@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Decimal;
+namespace EndouMame\PhpValueObject\Number\Decimal;
 
 use Override;
 
 /**
  * Default implementation of IComparison
- * @see WizDevelop\PhpValueObject\Number\Decimal\IComparison
- * @see WizDevelop\PhpValueObject\Number\Decimal\DecimalValueBase
+ * @see EndouMame\PhpValueObject\Number\Decimal\IComparison
+ * @see EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase
  */
 trait Comparison
 {

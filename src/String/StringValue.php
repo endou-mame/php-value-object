@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\String;
+namespace EndouMame\PhpValueObject\String;
 
 use Override;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\String\Base\StringValueBase;
-use WizDevelop\PhpValueObject\String\Base\StringValueFactory;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\String\Base\StringValueBase;
+use EndouMame\PhpValueObject\String\Base\StringValueFactory;
 
 /**
  * 文字列の値オブジェクトの性質を提供する

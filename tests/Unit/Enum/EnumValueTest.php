@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Enum;
+namespace EndouMame\PhpValueObject\Tests\Unit\Enum;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
-use WizDevelop\PhpValueObject\Enum\EnumValueFactory;
-use WizDevelop\PhpValueObject\Enum\EnumValueObjectDefault;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Examples\Enum\TestEnumValue;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpValueObject\Enum\EnumValueFactory;
+use EndouMame\PhpValueObject\Enum\EnumValueObjectDefault;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Enum\TestEnumValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * 列挙型(Enum)値オブジェクトのテスト

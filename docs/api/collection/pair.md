@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Collection\Pair
+EndouMame\PhpValueObject\Collection\Pair
 ```
 
 ## ジェネリック型

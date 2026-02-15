@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Integer;
+namespace EndouMame\PhpValueObject\Number\Integer;
 
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * 算術演算可能な整数の値オブジェクト

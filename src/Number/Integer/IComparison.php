@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Integer;
+namespace EndouMame\PhpValueObject\Number\Integer;
 
 /**
  * 比較可能な整数の値オブジェクト

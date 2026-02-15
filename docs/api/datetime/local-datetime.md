@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\DateTime\LocalDateTime
+EndouMame\PhpValueObject\DateTime\LocalDateTime
 ```
 
 ## 実装インターフェース

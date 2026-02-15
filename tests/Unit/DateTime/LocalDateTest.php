@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\DateTime;
+namespace EndouMame\PhpValueObject\Tests\Unit\DateTime;
 
 use DateTimeImmutable;
 use DateTimeZone;
@@ -12,10 +12,10 @@ use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
-use WizDevelop\PhpValueObject\DateTime\LocalDate;
-use WizDevelop\PhpValueObject\DateTime\LocalDateTime;
-use WizDevelop\PhpValueObject\DateTime\LocalTime;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpValueObject\DateTime\LocalDate;
+use EndouMame\PhpValueObject\DateTime\LocalDateTime;
+use EndouMame\PhpValueObject\DateTime\LocalTime;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * LocalDateクラスのテスト

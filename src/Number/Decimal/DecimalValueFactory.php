@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Decimal;
+namespace EndouMame\PhpValueObject\Number\Decimal;
 
 use BcMath\Number;
 use Override;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
 
 /**
  * Default implementation of IDecimalValueFactory
- * @see WizDevelop\PhpValueObject\Number\Decimal\DecimalValueBase
- * @see WizDevelop\PhpValueObject\Number\Decimal\IDecimalValueFactory
+ * @see EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase
+ * @see EndouMame\PhpValueObject\Number\Decimal\IDecimalValueFactory
  */
 trait DecimalValueFactory
 {

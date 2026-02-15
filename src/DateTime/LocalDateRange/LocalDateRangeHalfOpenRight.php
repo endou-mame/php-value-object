@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\DateTime\LocalDateRange;
+namespace EndouMame\PhpValueObject\DateTime\LocalDateRange;
 
 use Override;
-use WizDevelop\PhpValueObject\DateTime\LocalDate;
-use WizDevelop\PhpValueObject\DateTime\LocalDateRange;
-use WizDevelop\PhpValueObject\DateTime\RangeType;
+use EndouMame\PhpValueObject\DateTime\LocalDate;
+use EndouMame\PhpValueObject\DateTime\LocalDateRange;
+use EndouMame\PhpValueObject\DateTime\RangeType;
 
 /**
  * @extends LocalDateRange<LocalDate, LocalDate>

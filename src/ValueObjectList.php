@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject;
+namespace EndouMame\PhpValueObject;
 
-use WizDevelop\PhpValueObject\Collection\ArrayList;
+use EndouMame\PhpValueObject\Collection\ArrayList;
 
 /**
  * @template TValue of IValueObject

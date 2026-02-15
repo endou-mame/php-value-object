@@ -36,9 +36,9 @@ export default defineConfig({
       {
         text: 'リンク',
         items: [
-          { text: 'GitHub', link: 'https://github.com/wiz-develop/php-value-object' },
-          { text: 'Packagist', link: 'https://packagist.org/packages/wiz-develop/php-value-object' },
-          { text: 'php-monad', link: 'https://github.com/wiz-develop/php-monad' }
+          { text: 'GitHub', link: 'https://github.com/endou-mame/php-value-object' },
+          { text: 'Packagist', link: 'https://packagist.org/packages/endou-mame/php-value-object' },
+          { text: 'php-monad', link: 'https://github.com/endou-mame/php-monad' }
         ]
       }
     ],
@@ -158,12 +158,12 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/wiz-develop/php-value-object' }
+      { icon: 'github', link: 'https://github.com/endou-mame/php-value-object' }
     ],
 
     footer: {
       message: 'MIT ライセンスの下で公開されています。',
-      copyright: 'Copyright © 2024 wiz-develop'
+      copyright: 'Copyright © 2024 endou-mame'
     },
 
     search: {
@@ -206,7 +206,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/wiz-develop/php-value-object/edit/main/docs/:path',
+      pattern: 'https://github.com/endou-mame/php-value-object/edit/main/docs/:path',
       text: 'このページを編集する'
     }
   }

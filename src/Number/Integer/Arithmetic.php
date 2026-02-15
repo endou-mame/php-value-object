@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Integer;
+namespace EndouMame\PhpValueObject\Number\Integer;
 
 use DivisionByZeroError;
 use Override;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * Default implementation of IArithmetic
- * @see WizDevelop\PhpValueObject\Number\Integer\IArithmetic
- * @see WizDevelop\PhpValueObject\Number\Integer\IntegerValueBase
- * @see WizDevelop\PhpValueObject\Number\Integer\IIntegerValueFactory
+ * @see EndouMame\PhpValueObject\Number\Integer\IArithmetic
+ * @see EndouMame\PhpValueObject\Number\Integer\IntegerValueBase
+ * @see EndouMame\PhpValueObject\Number\Integer\IIntegerValueFactory
  */
 trait Arithmetic
 {

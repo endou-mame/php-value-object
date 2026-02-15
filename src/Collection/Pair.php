@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection;
+namespace EndouMame\PhpValueObject\Collection;
 
 use Stringable;
-use WizDevelop\PhpValueObject\IValueObject;
-use WizDevelop\PhpValueObject\ValueObjectDefault;
+use EndouMame\PhpValueObject\IValueObject;
+use EndouMame\PhpValueObject\ValueObjectDefault;
 
 /**
  * A pair which represents a key and an associated value.

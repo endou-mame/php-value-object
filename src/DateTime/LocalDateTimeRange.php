@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\DateTime;
+namespace EndouMame\PhpValueObject\DateTime;
 
 use Override;
 use Stringable;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\IValueObject;
-use WizDevelop\PhpValueObject\Utils;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\IValueObject;
+use EndouMame\PhpValueObject\Utils;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 /**
  * ローカル日時範囲を表す値オブジェクト

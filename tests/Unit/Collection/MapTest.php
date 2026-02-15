@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Collection;
+namespace EndouMame\PhpValueObject\Tests\Unit\Collection;
 
 use BadMethodCallException;
 use BcMath\Number;
@@ -13,14 +13,14 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 use Stringable;
-use WizDevelop\PhpValueObject\Collection\ArrayList;
-use WizDevelop\PhpValueObject\Collection\Exception\CollectionNotFoundException;
-use WizDevelop\PhpValueObject\Collection\Exception\MultipleCollectionsFoundException;
-use WizDevelop\PhpValueObject\Collection\Map;
-use WizDevelop\PhpValueObject\Collection\Pair;
-use WizDevelop\PhpValueObject\Number\DecimalValue;
-use WizDevelop\PhpValueObject\Number\IntegerValue;
-use WizDevelop\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\Collection\ArrayList;
+use EndouMame\PhpValueObject\Collection\Exception\CollectionNotFoundException;
+use EndouMame\PhpValueObject\Collection\Exception\MultipleCollectionsFoundException;
+use EndouMame\PhpValueObject\Collection\Map;
+use EndouMame\PhpValueObject\Collection\Pair;
+use EndouMame\PhpValueObject\Number\DecimalValue;
+use EndouMame\PhpValueObject\Number\IntegerValue;
+use EndouMame\PhpValueObject\String\StringValue;
 
 #[TestDox('Mapクラスのテスト')]
 #[CoversClass(Map::class)]

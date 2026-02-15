@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Decimal;
+namespace EndouMame\PhpValueObject\Number\Decimal;
 
 use BcMath\Number;
 use Override;
 use Stringable;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\IValueObject;
-use WizDevelop\PhpValueObject\Utils;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\IValueObject;
+use EndouMame\PhpValueObject\Utils;
 
 /**
  * 少数の値オブジェクトの基底クラス

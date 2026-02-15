@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject;
+namespace EndouMame\PhpValueObject;
 
 use Override;
 
 /**
  * Default implementation of IValueObject and Stringable.
- * @see WizDevelop\PhpValueObject\IValueObject
+ * @see EndouMame\PhpValueObject\IValueObject
  * @see Stringable
  */
 trait ValueObjectDefault

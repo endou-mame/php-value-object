@@ -11,7 +11,7 @@
 カスタム値オブジェクトには `ValueObjectMeta` 属性を付与することで、エラーメッセージなどで使用される名前を設定できます。
 
 ```php
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '商品コード', description: '商品を識別するコード')]
 final readonly class ProductCode extends StringValue

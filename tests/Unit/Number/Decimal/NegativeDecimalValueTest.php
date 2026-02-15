@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Number\Decimal;
+namespace EndouMame\PhpValueObject\Tests\Unit\Number\Decimal;
 
 use AssertionError;
 use BcMath\Number;
@@ -12,11 +12,11 @@ use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use Throwable;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Examples\Number\Decimal\TestNegativeDecimalValue;
-use WizDevelop\PhpValueObject\Examples\Number\Decimal\TestPositiveDecimalValue;
-use WizDevelop\PhpValueObject\Number\NegativeDecimalValue;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Number\Decimal\TestNegativeDecimalValue;
+use EndouMame\PhpValueObject\Examples\Number\Decimal\TestPositiveDecimalValue;
+use EndouMame\PhpValueObject\Number\NegativeDecimalValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * NegativeDecimalValue抽象クラスのテスト

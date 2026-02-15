@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\String;
+namespace EndouMame\PhpValueObject\Tests\Unit\String;
 
 use DateTimeImmutable;
 use Error;
@@ -12,10 +12,10 @@ use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Examples\String\TestUlidValue;
-use WizDevelop\PhpValueObject\String\Ulid;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\String\TestUlidValue;
+use EndouMame\PhpValueObject\String\Ulid;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * UlidValueクラスのテスト

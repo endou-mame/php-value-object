@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Boolean\BooleanValue
+EndouMame\PhpValueObject\Boolean\BooleanValue
 ```
 
 ## 継承関係
@@ -234,8 +234,8 @@ json_encode($bool); // "true"
 BooleanValue を継承してカスタムクラスを作成できます。
 
 ```php
-use WizDevelop\PhpValueObject\Boolean\BooleanValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Boolean\BooleanValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '有効フラグ')]
 final readonly class IsActive extends BooleanValue

@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Number\IntegerValue
+EndouMame\PhpValueObject\Number\IntegerValue
 ```
 
 ## 継承関係
@@ -243,8 +243,8 @@ public function equals(IValueObject $other): bool
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\Number\IntegerValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Number\IntegerValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '年齢')]
 final readonly class Age extends IntegerValue

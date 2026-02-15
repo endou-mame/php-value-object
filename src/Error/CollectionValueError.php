@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Error;
+namespace EndouMame\PhpValueObject\Error;
 
-use WizDevelop\PhpValueObject\Collection\Base\CollectionBase;
+use EndouMame\PhpValueObject\Collection\Base\CollectionBase;
 
 /**
  * CollectionValue エラー

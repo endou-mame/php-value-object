@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Error;
+namespace EndouMame\PhpValueObject\Error;
 
 /**
  * DateTimeValue エラー

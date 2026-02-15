@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Number\DecimalValue
+EndouMame\PhpValueObject\Number\DecimalValue
 ```
 
 ## 継承関係
@@ -187,8 +187,8 @@ public function equals(IValueObject $other): bool
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\Number\Decimal\DecimalValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Number\Decimal\DecimalValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 use BcMath\Number;
 
 #[ValueObjectMeta(name: '価格')]

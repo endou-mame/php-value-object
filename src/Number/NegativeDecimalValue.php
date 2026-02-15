@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number;
+namespace EndouMame\PhpValueObject\Number;
 
 use BcMath\Number;
 use Override;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Number\Decimal\DecimalValueBase;
-use WizDevelop\PhpValueObject\Number\Decimal\DecimalValueFactory;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase;
+use EndouMame\PhpValueObject\Number\Decimal\DecimalValueFactory;
 
 /**
  * 負の少数の値オブジェクト

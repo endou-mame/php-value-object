@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection\List;
+namespace EndouMame\PhpValueObject\Collection\List;
 
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\IErrorValue;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\IErrorValue;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * リストコレクション ファクトリインターフェース
- * @see WizDevelop\PhpValueObject\Collection\ArrayList
+ * @see EndouMame\PhpValueObject\Collection\ArrayList
  *
  * @template TValue
  */

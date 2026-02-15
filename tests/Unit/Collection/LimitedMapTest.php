@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Collection;
+namespace EndouMame\PhpValueObject\Tests\Unit\Collection;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
-use WizDevelop\PhpValueObject\Collection\Pair;
-use WizDevelop\PhpValueObject\Examples\Collection\LimitedMap;
+use EndouMame\PhpValueObject\Collection\Pair;
+use EndouMame\PhpValueObject\Examples\Collection\LimitedMap;
 
 #[TestDox('LimitedMapクラスのテスト')]
 #[CoversClass(LimitedMap::class)]

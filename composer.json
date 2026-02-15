@@ -1,21 +1,20 @@
 {
-    "name": "wiz-develop/php-value-object",
+    "name": "endou-mame/php-value-object",
     "description": "📦 The PHP Value Object library offers immutable, type-safe, and self-validating objects to model domain values using the Value Object pattern.",
     "require": {
         "php": ">=8.4",
-        "wiz-develop/php-monad": "^2.6"
+        "endou-mame/php-monad": "^1.0"
     },
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "WizDevelop\\PhpValueObject\\": "src"
+            "EndouMame\\PhpValueObject\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WizDevelop\\PhpValueObject\\Examples\\": "examples",
-            "WizDevelop\\PhpValueObject\\Tests\\": "tests"
+            "EndouMame\\PhpValueObject\\Tests\\": "tests"
         }
     },
     "authors": [
@@ -26,7 +25,7 @@
     ],
     "minimum-stability": "stable",
     "require-dev": {
-        "wiz-develop/php-cs-fixer-config": "^8.4",
+        "endou-mame/php-cs-fixer-config": "^8.4",
         "phpunit/php-code-coverage": "^11.0",
         "phpunit/phpunit": "^11.3",
         "phpstan/phpstan": "^2.1",

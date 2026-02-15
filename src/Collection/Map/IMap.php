@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection\Map;
+namespace EndouMame\PhpValueObject\Collection\Map;
 
 use Closure;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpValueObject\Collection\ArrayList;
-use WizDevelop\PhpValueObject\Collection\Base\ICollection;
-use WizDevelop\PhpValueObject\Collection\Exception\CollectionNotFoundException;
-use WizDevelop\PhpValueObject\Collection\Exception\MultipleCollectionsFoundException;
-use WizDevelop\PhpValueObject\Collection\Pair;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpValueObject\Collection\ArrayList;
+use EndouMame\PhpValueObject\Collection\Base\ICollection;
+use EndouMame\PhpValueObject\Collection\Exception\CollectionNotFoundException;
+use EndouMame\PhpValueObject\Collection\Exception\MultipleCollectionsFoundException;
+use EndouMame\PhpValueObject\Collection\Pair;
 
 /**
  * マップコレクション インターフェース
  * @template TKey
  * @template TValue
- * @uses WizDevelop\PhpValueObject\Collection\Map
+ * @uses EndouMame\PhpValueObject\Collection\Map
  * @extends ICollection<TKey,TValue>
  */
 interface IMap extends ICollection

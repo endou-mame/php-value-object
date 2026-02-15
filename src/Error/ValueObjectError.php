@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Error;
+namespace EndouMame\PhpValueObject\Error;
 
 use ReflectionClass;
 use ReflectionException;
-use WizDevelop\PhpValueObject\IValueObject;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\IValueObject;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 /**
  * 値オブジェクトエラー

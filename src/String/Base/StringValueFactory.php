@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\String\Base;
+namespace EndouMame\PhpValueObject\String\Base;
 
 use Override;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
 
 /**
  * Default implementation of IStringValueFactory
- * @see WizDevelop\PhpValueObject\String\StringValue
- * @see WizDevelop\PhpValueObject\String\Base\IStringValueFactory
+ * @see EndouMame\PhpValueObject\String\StringValue
+ * @see EndouMame\PhpValueObject\String\Base\IStringValueFactory
  */
 trait StringValueFactory
 {

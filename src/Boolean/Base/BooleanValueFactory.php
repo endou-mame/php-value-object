@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Boolean\Base;
+namespace EndouMame\PhpValueObject\Boolean\Base;
 
 use Override;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
 
 /**
  * Default implementation of IBooleanValueFactory
- * @see WizDevelop\PhpValueObject\Boolean\BooleanValue
- * @see WizDevelop\PhpValueObject\Boolean\Base\IBooleanValueFactory
+ * @see EndouMame\PhpValueObject\Boolean\BooleanValue
+ * @see EndouMame\PhpValueObject\Boolean\Base\IBooleanValueFactory
  */
 trait BooleanValueFactory
 {

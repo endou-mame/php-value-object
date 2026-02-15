@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection\Exception;
+namespace EndouMame\PhpValueObject\Collection\Exception;
 
 use RuntimeException;
 

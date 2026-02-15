@@ -9,7 +9,7 @@
 ### 作成
 
 ```php
-use WizDevelop\PhpValueObject\DateTime\LocalDate;
+use EndouMame\PhpValueObject\DateTime\LocalDate;
 use DateTimeImmutable;
 use DateTimeZone;
 
@@ -120,7 +120,7 @@ $dateTime = $date->atTime($time); // LocalDateTime
 ### 作成
 
 ```php
-use WizDevelop\PhpValueObject\DateTime\LocalTime;
+use EndouMame\PhpValueObject\DateTime\LocalTime;
 use DateTimeZone;
 
 // 時分秒を指定して作成
@@ -196,9 +196,9 @@ $time1->isAfter($time2);   // false
 ### 作成
 
 ```php
-use WizDevelop\PhpValueObject\DateTime\LocalDateTime;
-use WizDevelop\PhpValueObject\DateTime\LocalDate;
-use WizDevelop\PhpValueObject\DateTime\LocalTime;
+use EndouMame\PhpValueObject\DateTime\LocalDateTime;
+use EndouMame\PhpValueObject\DateTime\LocalDate;
+use EndouMame\PhpValueObject\DateTime\LocalTime;
 use DateTimeZone;
 
 // LocalDate と LocalTime から作成
@@ -274,9 +274,9 @@ $future->isFuture(); // true
 ### 作成
 
 ```php
-use WizDevelop\PhpValueObject\DateTime\LocalDateRange;
-use WizDevelop\PhpValueObject\DateTime\LocalDate;
-use WizDevelop\PhpValueObject\DateTime\RangeType;
+use EndouMame\PhpValueObject\DateTime\LocalDateRange;
+use EndouMame\PhpValueObject\DateTime\LocalDate;
+use EndouMame\PhpValueObject\DateTime\RangeType;
 
 $start = LocalDate::of(2025, 5, 1);
 $end = LocalDate::of(2025, 5, 31);

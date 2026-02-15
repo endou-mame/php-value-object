@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Error;
+namespace EndouMame\PhpValueObject\Tests\Unit\Error;
 
 use AssertionError;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
-use WizDevelop\PhpValueObject\Error\ErrorValue;
-use WizDevelop\PhpValueObject\Error\IErrorValue;
+use EndouMame\PhpValueObject\Error\ErrorValue;
+use EndouMame\PhpValueObject\Error\IErrorValue;
 
 #[TestDox('ErrorValueクラスのテスト')]
 #[CoversClass(ErrorValue::class)]

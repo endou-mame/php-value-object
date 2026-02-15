@@ -1,17 +1,17 @@
 # PHP Value Object
 
-[![Packagist Version](https://img.shields.io/packagist/v/wiz-develop/php-value-object)](https://packagist.org/packages/wiz-develop/php-value-object)
-[![PHP Version](https://img.shields.io/packagist/php-v/wiz-develop/php-value-object)](https://packagist.org/packages/wiz-develop/php-value-object)
-[![PHPStan](https://github.com/wiz-develop/php-value-object/actions/workflows/phpstan.yml/badge.svg)](https://github.com/wiz-develop/php-value-object/actions/workflows/phpstan.yml)
-[![Documentation](https://github.com/wiz-develop/php-value-object/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/wiz-develop/php-value-object/actions/workflows/deploy-docs.yml)
-[![License](https://img.shields.io/packagist/l/wiz-develop/php-value-object)](https://github.com/wiz-develop/php-value-object/blob/main/LICENSE)
+[![Packagist Version](https://img.shields.io/packagist/v/endou-mame/php-value-object)](https://packagist.org/packages/endou-mame/php-value-object)
+[![PHP Version](https://img.shields.io/packagist/php-v/endou-mame/php-value-object)](https://packagist.org/packages/endou-mame/php-value-object)
+[![PHPStan](https://github.com/endou-mame/php-value-object/actions/workflows/phpstan.yml/badge.svg)](https://github.com/endou-mame/php-value-object/actions/workflows/phpstan.yml)
+[![Documentation](https://github.com/endou-mame/php-value-object/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/endou-mame/php-value-object/actions/workflows/deploy-docs.yml)
+[![License](https://img.shields.io/packagist/l/endou-mame/php-value-object)](https://github.com/endou-mame/php-value-object/blob/main/LICENSE)
 
 不変性、型安全性、自己検証を持つドメイン値オブジェクトを提供する PHP ライブラリです。
 
 ## インストール
 
 ```bash
-composer require wiz-develop/php-value-object
+composer require endou-mame/php-value-object
 ```
 
 ## 使用例
@@ -19,8 +19,8 @@ composer require wiz-develop/php-value-object
 ### カスタム値オブジェクトの作成
 
 ```php
-use WizDevelop\PhpValueObject\String\StringValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '商品コード')]
 final readonly class ProductCode extends StringValue
@@ -36,7 +36,7 @@ $code = ProductCode::from('P1234');
 ### Result 型によるエラーハンドリング
 
 ```php
-use WizDevelop\PhpMonad\Result;
+use EndouMame\PhpMonad\Result;
 
 $result = ProductCode::tryFrom('invalid');
 
@@ -47,7 +47,7 @@ $code = $result
 
 ## ドキュメント
 
-詳細なガイドと API リファレンスは [ドキュメントサイト](https://wiz-develop.github.io/php-value-object/) を参照してください。
+詳細なガイドと API リファレンスは [ドキュメントサイト](https://endou-mame.github.io/php-value-object/) を参照してください。
 
 ## 要件
 

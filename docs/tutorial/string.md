@@ -9,7 +9,7 @@
 ### 基本的な使い方
 
 ```php
-use WizDevelop\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\String\StringValue;
 
 // 作成
 $str = StringValue::from("Hello, World!");
@@ -53,7 +53,7 @@ $str = $option->unwrap();
 ### 基本的な使い方
 
 ```php
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 // 有効なメールアドレス
 $email = EmailAddress::from("test@example.com");
@@ -103,7 +103,7 @@ ULID (Universally Unique Lexicographically Sortable Identifier) を扱う値オ�
 ### ULID の生成
 
 ```php
-use WizDevelop\PhpValueObject\String\Ulid;
+use EndouMame\PhpValueObject\String\Ulid;
 
 // 新しい ULID を生成
 $ulid = Ulid::generate();
@@ -168,8 +168,8 @@ $result->isErr(); // true
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\String\StringValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '商品コード')]
 final readonly class ProductCode extends StringValue

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection\List;
+namespace EndouMame\PhpValueObject\Collection\List;
 
 use Closure;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpValueObject\Collection\Base\ICollection;
-use WizDevelop\PhpValueObject\Collection\Exception\CollectionNotFoundException;
-use WizDevelop\PhpValueObject\Collection\Exception\MultipleCollectionsFoundException;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpValueObject\Collection\Base\ICollection;
+use EndouMame\PhpValueObject\Collection\Exception\CollectionNotFoundException;
+use EndouMame\PhpValueObject\Collection\Exception\MultipleCollectionsFoundException;
 
 /**
  * リストコレクション インターフェース
  * @template TValue
- * @uses WizDevelop\PhpValueObject\Collection\ArrayList
+ * @uses EndouMame\PhpValueObject\Collection\ArrayList
  * @extends ICollection<int,TValue>
  */
 interface IArrayList extends ICollection

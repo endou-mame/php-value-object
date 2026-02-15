@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Boolean\Base;
+namespace EndouMame\PhpValueObject\Boolean\Base;
 
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * 真偽値の値オブジェクト ファクトリインターフェース
- * @see WizDevelop\PhpValueObject\Boolean\Base\BooleanValueFactory
+ * @see EndouMame\PhpValueObject\Boolean\Base\BooleanValueFactory
  */
 interface IBooleanValueFactory
 {

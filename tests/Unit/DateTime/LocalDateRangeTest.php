@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\DateTime;
+namespace EndouMame\PhpValueObject\Tests\Unit\DateTime;
 
 use AssertionError;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use WizDevelop\PhpValueObject\DateTime\LocalDate;
-use WizDevelop\PhpValueObject\DateTime\LocalDateRange;
-use WizDevelop\PhpValueObject\DateTime\LocalDateRange\LocalDateRangeClosed;
-use WizDevelop\PhpValueObject\DateTime\LocalDateRange\LocalDateRangeHalfOpenLeft;
-use WizDevelop\PhpValueObject\DateTime\LocalDateRange\LocalDateRangeHalfOpenRight;
-use WizDevelop\PhpValueObject\DateTime\LocalDateRange\LocalDateRangeOpen;
-use WizDevelop\PhpValueObject\DateTime\RangeType;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\DateTime\LocalDate;
+use EndouMame\PhpValueObject\DateTime\LocalDateRange;
+use EndouMame\PhpValueObject\DateTime\LocalDateRange\LocalDateRangeClosed;
+use EndouMame\PhpValueObject\DateTime\LocalDateRange\LocalDateRangeHalfOpenLeft;
+use EndouMame\PhpValueObject\DateTime\LocalDateRange\LocalDateRangeHalfOpenRight;
+use EndouMame\PhpValueObject\DateTime\LocalDateRange\LocalDateRangeOpen;
+use EndouMame\PhpValueObject\DateTime\RangeType;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * @phpstan-import-type Year from LocalDate

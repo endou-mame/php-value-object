@@ -1,14 +1,14 @@
 # Result 型との連携
 
-PHP Value Object ライブラリは [php-monad](https://github.com/wiz-develop/php-monad) ライブラリの Result 型と密接に連携しています。
+PHP Value Object ライブラリは [php-monad](https://github.com/endou-mame/php-monad) ライブラリの Result 型と密接に連携しています。
 
 ## Result 型の基本
 
 Result 型は成功 (Ok) または失敗 (Err) を表現する型です。例外を使わずにエラーを扱えます。
 
 ```php
-use WizDevelop\PhpMonad\Result;
-use function WizDevelop\PhpMonad\Result\{ok, err};
+use EndouMame\PhpMonad\Result;
+use function EndouMame\PhpMonad\Result\{ok, err};
 
 // 成功
 $success = ok("value");
@@ -22,7 +22,7 @@ $failure = err(new Error("message"));
 値オブジェクトの `tryFrom` メソッドは Result 型を返します。
 
 ```php
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 $result = EmailAddress::tryFrom($userInput);
 
@@ -246,7 +246,7 @@ class ApiClient
 `fromNullable` メソッドは Option 型を返します。
 
 ```php
-use WizDevelop\PhpMonad\Option;
+use EndouMame\PhpMonad\Option;
 
 $option = EmailAddress::fromNullable($maybeNull);
 
@@ -263,4 +263,4 @@ $emailOrNull = $option->unwrapOrNull();
 ## 関連
 
 - [コンセプト - Result 型によるエラーハンドリング](/guide/concepts#result-型によるエラーハンドリング)
-- [php-monad ドキュメント](https://github.com/wiz-develop/php-monad)
+- [php-monad ドキュメント](https://github.com/endou-mame/php-monad)

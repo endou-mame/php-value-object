@@ -115,7 +115,7 @@ class UserDTO
 
 ```php
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 class EmailAddressCast implements CastsAttributes
 {
@@ -165,7 +165,7 @@ $user->save();
 ```php
 use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use WizDevelop\PhpValueObject\String\EmailAddress;
+use EndouMame\PhpValueObject\String\EmailAddress;
 
 class EmailAddressType extends Type
 {

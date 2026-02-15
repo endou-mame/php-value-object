@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Error;
+namespace EndouMame\PhpValueObject\Error;
 
 use BackedEnum;
-use WizDevelop\PhpValueObject\Enum\IEnumValue;
+use EndouMame\PhpValueObject\Enum\IEnumValue;
 
 /**
  * EnumValue エラー

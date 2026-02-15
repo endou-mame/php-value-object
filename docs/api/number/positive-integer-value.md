@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Number\PositiveIntegerValue
+EndouMame\PhpValueObject\Number\PositiveIntegerValue
 ```
 
 ## 継承関係
@@ -87,8 +87,8 @@ $result->isErr(); // true
 ### 数量
 
 ```php
-use WizDevelop\PhpValueObject\Number\PositiveIntegerValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Number\PositiveIntegerValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '数量')]
 final readonly class Quantity extends PositiveIntegerValue

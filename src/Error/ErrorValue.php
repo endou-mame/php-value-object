@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Error;
+namespace EndouMame\PhpValueObject\Error;
 
 use Override;
-use WizDevelop\PhpValueObject\ValueObjectDefault;
+use EndouMame\PhpValueObject\ValueObjectDefault;
 
 /**
  * エラー値オブジェクト

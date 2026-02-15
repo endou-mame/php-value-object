@@ -2,26 +2,26 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection;
+namespace EndouMame\PhpValueObject\Collection;
 
 use ArrayAccess;
 use Closure;
 use Generator;
 use LogicException;
 use Override;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Collection\Base\ArrayAccessDefault;
-use WizDevelop\PhpValueObject\Collection\Base\CollectionBase;
-use WizDevelop\PhpValueObject\Collection\Base\CollectionDefault;
-use WizDevelop\PhpValueObject\Collection\Base\CountableDefault;
-use WizDevelop\PhpValueObject\Collection\Base\ICollection;
-use WizDevelop\PhpValueObject\Collection\Exception\CollectionNotFoundException;
-use WizDevelop\PhpValueObject\Collection\Exception\MultipleCollectionsFoundException;
-use WizDevelop\PhpValueObject\Collection\List\IArrayList;
-use WizDevelop\PhpValueObject\Collection\List\IArrayListFactory;
-use WizDevelop\PhpValueObject\Error\IErrorValue;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Collection\Base\ArrayAccessDefault;
+use EndouMame\PhpValueObject\Collection\Base\CollectionBase;
+use EndouMame\PhpValueObject\Collection\Base\CollectionDefault;
+use EndouMame\PhpValueObject\Collection\Base\CountableDefault;
+use EndouMame\PhpValueObject\Collection\Base\ICollection;
+use EndouMame\PhpValueObject\Collection\Exception\CollectionNotFoundException;
+use EndouMame\PhpValueObject\Collection\Exception\MultipleCollectionsFoundException;
+use EndouMame\PhpValueObject\Collection\List\IArrayList;
+use EndouMame\PhpValueObject\Collection\List\IArrayListFactory;
+use EndouMame\PhpValueObject\Error\IErrorValue;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * リストコレクション

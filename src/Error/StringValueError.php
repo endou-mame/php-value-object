@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Error;
+namespace EndouMame\PhpValueObject\Error;
 
-use WizDevelop\PhpValueObject\String\Base\StringValueBase;
+use EndouMame\PhpValueObject\String\Base\StringValueBase;
 
 /**
  * StringValue エラー

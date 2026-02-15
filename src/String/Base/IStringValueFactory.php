@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\String\Base;
+namespace EndouMame\PhpValueObject\String\Base;
 
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 /**
  * 文字列の値オブジェクト ファクトリインターフェース
- * @see WizDevelop\PhpValueObject\String\Base\StringValueFactory
+ * @see EndouMame\PhpValueObject\String\Base\StringValueFactory
  */
 interface IStringValueFactory
 {

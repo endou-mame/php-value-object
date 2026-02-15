@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Number\Integer;
+namespace EndouMame\PhpValueObject\Tests\Unit\Number\Integer;
 
 use AssertionError;
 use Error;
@@ -12,10 +12,10 @@ use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Examples\Number\Integer\TestPositiveIntegerValue;
-use WizDevelop\PhpValueObject\Number\PositiveIntegerValue;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Number\Integer\TestPositiveIntegerValue;
+use EndouMame\PhpValueObject\Number\PositiveIntegerValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * PositiveIntegerValue抽象クラスのテスト

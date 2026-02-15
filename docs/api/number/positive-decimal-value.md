@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Number\PositiveDecimalValue
+EndouMame\PhpValueObject\Number\PositiveDecimalValue
 ```
 
 ## 継承関係

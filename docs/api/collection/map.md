@@ -5,7 +5,7 @@
 ## 名前空間
 
 ```php
-WizDevelop\PhpValueObject\Collection\Map
+EndouMame\PhpValueObject\Collection\Map
 ```
 
 ## 実装インターフェース

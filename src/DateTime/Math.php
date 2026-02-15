@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\DateTime;
+namespace EndouMame\PhpValueObject\DateTime;
 
 final readonly class Math
 {

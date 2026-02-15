@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Collection\Base;
+namespace EndouMame\PhpValueObject\Collection\Base;
 
 use Countable;
 use IteratorAggregate;
@@ -10,7 +10,7 @@ use IteratorAggregate;
 /**
  * @template TKey
  * @template TValue
- * @uses WizDevelop\PhpValueObject\Collection\Base\CollectionDefault
+ * @uses EndouMame\PhpValueObject\Collection\Base\CollectionDefault
  * @extends IteratorAggregate<TKey,TValue>
  */
 interface ICollection extends Countable, IteratorAggregate

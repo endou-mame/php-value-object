@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Number\Integer;
+namespace EndouMame\PhpValueObject\Number\Integer;
 
 use Override;
-use WizDevelop\PhpMonad\Option;
-use WizDevelop\PhpMonad\Result;
+use EndouMame\PhpMonad\Option;
+use EndouMame\PhpMonad\Result;
 
 /**
  * Default implementation of IIntegerValueFactory
- * @see WizDevelop\PhpValueObject\Number\Integer\IntegerValueBase
- * @see WizDevelop\PhpValueObject\Number\Integer\IIntegerValueFactory
+ * @see EndouMame\PhpValueObject\Number\Integer\IntegerValueBase
+ * @see EndouMame\PhpValueObject\Number\Integer\IIntegerValueFactory
  */
 trait IntegerValueFactory
 {

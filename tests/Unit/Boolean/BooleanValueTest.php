@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Boolean;
+namespace EndouMame\PhpValueObject\Tests\Unit\Boolean;
 
 use Error;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -10,9 +10,9 @@ use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
-use WizDevelop\PhpValueObject\Boolean\BooleanValue;
-use WizDevelop\PhpValueObject\Examples\Boolean\TestBooleanValue;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpValueObject\Boolean\BooleanValue;
+use EndouMame\PhpValueObject\Examples\Boolean\TestBooleanValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * BooleanValue抽象クラスのテスト

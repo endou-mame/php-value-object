@@ -7,7 +7,7 @@ BooleanValue は真偽値を扱う値オブジェクトです。
 ### インスタンスの作成
 
 ```php
-use WizDevelop\PhpValueObject\Boolean\BooleanValue;
+use EndouMame\PhpValueObject\Boolean\BooleanValue;
 
 // from メソッドで作成
 $bool = BooleanValue::from(true);
@@ -130,8 +130,8 @@ json_encode($bool); // "true"
 独自の Boolean 値オブジェクトを作成できます。
 
 ```php
-use WizDevelop\PhpValueObject\Boolean\BooleanValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\Boolean\BooleanValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '有効フラグ')]
 final readonly class IsActive extends BooleanValue

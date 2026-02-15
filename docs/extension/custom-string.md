@@ -19,8 +19,8 @@ StringValue を継承してカスタム文字列値オブジェクトを作成�
 
 ```php
 use Override;
-use WizDevelop\PhpValueObject\String\StringValue;
-use WizDevelop\PhpValueObject\ValueObjectMeta;
+use EndouMame\PhpValueObject\String\StringValue;
+use EndouMame\PhpValueObject\ValueObjectMeta;
 
 #[ValueObjectMeta(name: '商品コード')]
 final readonly class ProductCode extends StringValue
@@ -156,8 +156,8 @@ final readonly class PostalCode extends StringValue
 ### URL
 
 ```php
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
 
 #[ValueObjectMeta(name: 'URL')]
 final readonly class Url extends StringValue

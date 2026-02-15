@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WizDevelop\PhpValueObject\Tests\Unit\Number\Decimal;
+namespace EndouMame\PhpValueObject\Tests\Unit\Number\Decimal;
 
 use BcMath\Number;
 use DivisionByZeroError;
@@ -14,12 +14,12 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
 use Throwable;
-use WizDevelop\PhpMonad\Result;
-use WizDevelop\PhpValueObject\Error\ValueObjectError;
-use WizDevelop\PhpValueObject\Examples\Number\Decimal\TestDecimalValue;
-use WizDevelop\PhpValueObject\Number\Decimal\DecimalValueBase;
-use WizDevelop\PhpValueObject\Number\DecimalValue;
-use WizDevelop\PhpValueObject\Tests\TestCase;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Number\Decimal\TestDecimalValue;
+use EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase;
+use EndouMame\PhpValueObject\Number\DecimalValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * DecimalValue抽象クラスのテスト
