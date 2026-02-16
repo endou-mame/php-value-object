@@ -8,29 +8,29 @@
     "packages": [
         {
             "name": "endou-mame/php-monad",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/endou-mame/php-monad.git",
-                "reference": "cb9632c1b50f93bceef61c86edaab13dda3000a8"
+                "reference": "c84b781055729b9b3c92d6f7e25cfda1cc3b9398"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/endou-mame/php-monad/zipball/cb9632c1b50f93bceef61c86edaab13dda3000a8",
-                "reference": "cb9632c1b50f93bceef61c86edaab13dda3000a8",
+                "url": "https://api.github.com/repos/endou-mame/php-monad/zipball/c84b781055729b9b3c92d6f7e25cfda1cc3b9398",
+                "reference": "c84b781055729b9b3c92d6f7e25cfda1cc3b9398",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.3"
             },
             "require-dev": {
+                "endou-mame/php-cs-fixer-config": "^8.4",
                 "jiripudil/phpstan-sealed-classes": "^1.2",
                 "phpstan/extension-installer": "^1.4",
                 "phpstan/phpstan": "^1.12",
                 "phpstan/phpstan-strict-rules": "^1.6",
                 "phpunit/php-code-coverage": "^11.0",
-                "phpunit/phpunit": "^11.3",
-                "wiz-develop/php-cs-fixer-config": "^8.4"
+                "phpunit/phpunit": "^11.3"
             },
             "type": "library",
             "autoload": {
@@ -47,15 +47,16 @@
             ],
             "authors": [
                 {
-                    "name": "kakiuchi-shigenao",
+                    "name": "Kakiuchi Shigenao",
                     "email": "87973394+endou-mame@users.noreply.github.com"
                 }
             ],
             "description": "📦 Implemented the concept of monads in functional programming in PHP.",
             "support": {
-                "source": "https://github.com/endou-mame/php-monad/tree/v1.0.0"
+                "issues": "https://github.com/endou-mame/php-monad/issues",
+                "source": "https://github.com/endou-mame/php-monad/tree/v1.0.1"
             },
-            "time": "2026-02-10T14:49:56+00:00"
+            "time": "2026-02-16T13:48:11+00:00"
         }
     ],
     "packages-dev": [
