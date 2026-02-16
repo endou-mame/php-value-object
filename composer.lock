@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35fd72ee2a93518488163a43e54c7295",
+    "content-hash": "986c9f31bc9a063076b3c4cb868efe2f",
     "packages": [
         {
             "name": "endou-mame/php-monad",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/endou-mame/php-monad.git",
-                "reference": "c84b781055729b9b3c92d6f7e25cfda1cc3b9398"
+                "reference": "b1c24b2ba3c62b98511503a05fdd5314a704a7c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/endou-mame/php-monad/zipball/c84b781055729b9b3c92d6f7e25cfda1cc3b9398",
-                "reference": "c84b781055729b9b3c92d6f7e25cfda1cc3b9398",
+                "url": "https://api.github.com/repos/endou-mame/php-monad/zipball/b1c24b2ba3c62b98511503a05fdd5314a704a7c4",
+                "reference": "b1c24b2ba3c62b98511503a05fdd5314a704a7c4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.3"
             },
             "require-dev": {
-                "endou-mame/php-cs-fixer-config": "^8.4",
+                "endou-mame/php-cs-fixer-config": "~8.4.4",
                 "jiripudil/phpstan-sealed-classes": "^1.2",
                 "phpstan/extension-installer": "^1.4",
                 "phpstan/phpstan": "^1.12",
@@ -54,9 +54,9 @@
             "description": "📦 Implemented the concept of monads in functional programming in PHP.",
             "support": {
                 "issues": "https://github.com/endou-mame/php-monad/issues",
-                "source": "https://github.com/endou-mame/php-monad/tree/v1.0.1"
+                "source": "https://github.com/endou-mame/php-monad/tree/v1.0.2"
             },
-            "time": "2026-02-16T13:48:11+00:00"
+            "time": "2026-02-16T14:27:39+00:00"
         }
     ],
     "packages-dev": [
@@ -348,16 +348,16 @@
         },
         {
             "name": "endou-mame/php-cs-fixer-config",
-            "version": "v8.4.3",
+            "version": "v8.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/endou-mame/php-cs-fixer-config.git",
-                "reference": "f347cd9e29f700ddbb8a03a8ccf9ffe50bddccca"
+                "reference": "25b14f2d1e0797be40248eeda8d68367471b9f47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/endou-mame/php-cs-fixer-config/zipball/f347cd9e29f700ddbb8a03a8ccf9ffe50bddccca",
-                "reference": "f347cd9e29f700ddbb8a03a8ccf9ffe50bddccca",
+                "url": "https://api.github.com/repos/endou-mame/php-cs-fixer-config/zipball/25b14f2d1e0797be40248eeda8d68367471b9f47",
+                "reference": "25b14f2d1e0797be40248eeda8d68367471b9f47",
                 "shasum": ""
             },
             "require": {
@@ -388,9 +388,9 @@
             "description": "🛠 php-cs-fixer configuration for endou-mame.",
             "support": {
                 "issues": "https://github.com/endou-mame/php-cs-fixer-config/issues",
-                "source": "https://github.com/endou-mame/php-cs-fixer-config/tree/v8.4.3"
+                "source": "https://github.com/endou-mame/php-cs-fixer-config/tree/v8.4.4"
             },
-            "time": "2026-02-11T14:00:58+00:00"
+            "time": "2026-02-16T14:07:12+00:00"
         },
         {
             "name": "evenement/evenement",

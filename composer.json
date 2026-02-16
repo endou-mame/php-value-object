@@ -26,7 +26,7 @@
     ],
     "minimum-stability": "stable",
     "require-dev": {
-        "endou-mame/php-cs-fixer-config": "^8.4",
+        "endou-mame/php-cs-fixer-config": "~8.4.4",
         "phpunit/php-code-coverage": "^11.0",
         "phpunit/phpunit": "^11.3",
         "phpstan/phpstan": "^2.1",
