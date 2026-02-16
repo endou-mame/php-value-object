@@ -27,7 +27,7 @@ use EndouMame\PhpValueObject\String\StringValue;
 final class MapTest extends TestCase
 {
     /**
-     * @param Pair<mixed,mixed>[] $pairs
+     * @param Pair<int|string,mixed>[] $pairs
      */
     #[Test]
     #[DataProvider('様々な要素を持つPairの配列を提供')]
@@ -108,7 +108,7 @@ final class MapTest extends TestCase
     }
 
     /**
-     * @param Pair<mixed,mixed>[] $pairs
+     * @param Pair<int|string,mixed>[] $pairs
      */
     #[Test]
     #[DataProvider('様々な要素を持つPairの配列を提供')]
