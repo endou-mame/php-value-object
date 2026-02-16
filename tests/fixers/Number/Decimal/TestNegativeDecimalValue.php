@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace EndouMame\PhpValueObject\Examples\Number\Decimal;
+namespace EndouMame\PhpValueObject\Fixers\Number\Decimal;
 
 use BcMath\Number;
-use Override;
 use EndouMame\PhpValueObject\Number\NegativeDecimalValue;
 use EndouMame\PhpValueObject\ValueObjectMeta;
+use Override;
 
 /**
  * NegativeDecimalValue抽象クラスのテスト用実装

@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace EndouMame\PhpValueObject\Tests\Unit\Boolean;
 
+use EndouMame\PhpValueObject\Boolean\BooleanValue;
+use EndouMame\PhpValueObject\Fixers\Boolean\TestBooleanValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 use Error;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
-use EndouMame\PhpValueObject\Boolean\BooleanValue;
-use EndouMame\PhpValueObject\Examples\Boolean\TestBooleanValue;
-use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * BooleanValue抽象クラスのテスト

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EndouMame\PhpValueObject\Examples\Enum;
+namespace EndouMame\PhpValueObject\Fixers\Enum;
 
 use EndouMame\PhpValueObject\Enum\EnumValueFactory;
 use EndouMame\PhpValueObject\Enum\EnumValueObjectDefault;

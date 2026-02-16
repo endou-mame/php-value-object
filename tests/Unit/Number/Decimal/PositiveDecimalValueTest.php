@@ -7,7 +7,7 @@ namespace EndouMame\PhpValueObject\Tests\Unit\Number\Decimal;
 use AssertionError;
 use BcMath\Number;
 use EndouMame\PhpValueObject\Error\ValueObjectError;
-use EndouMame\PhpValueObject\Examples\Number\Decimal\TestPositiveDecimalValue;
+use EndouMame\PhpValueObject\Fixers\Number\Decimal\TestPositiveDecimalValue;
 use EndouMame\PhpValueObject\Number\PositiveDecimalValue;
 use EndouMame\PhpValueObject\Tests\TestCase;
 use PHPUnit\Framework\Attributes\CoversClass;

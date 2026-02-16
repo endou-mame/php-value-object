@@ -5,6 +5,11 @@ declare(strict_types=1);
 namespace EndouMame\PhpValueObject\Tests\Unit\Number\Integer;
 
 use AssertionError;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Fixers\Number\Integer\TestNegativeIntegerValue;
+use EndouMame\PhpValueObject\Fixers\Number\Integer\TestPositiveIntegerValue;
+use EndouMame\PhpValueObject\Number\NegativeIntegerValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
@@ -12,11 +17,6 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
 use Throwable;
-use EndouMame\PhpValueObject\Error\ValueObjectError;
-use EndouMame\PhpValueObject\Examples\Number\Integer\TestNegativeIntegerValue;
-use EndouMame\PhpValueObject\Examples\Number\Integer\TestPositiveIntegerValue;
-use EndouMame\PhpValueObject\Number\NegativeIntegerValue;
-use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * NegativeIntegerValue抽象クラスのテスト

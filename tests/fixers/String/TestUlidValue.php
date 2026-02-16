@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EndouMame\PhpValueObject\Examples\String;
+namespace EndouMame\PhpValueObject\Fixers\String;
 
 use EndouMame\PhpValueObject\String\Ulid;
 use EndouMame\PhpValueObject\ValueObjectMeta;

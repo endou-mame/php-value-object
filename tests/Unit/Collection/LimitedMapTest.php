@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace EndouMame\PhpValueObject\Tests\Unit\Collection;
 
+use EndouMame\PhpValueObject\Collection\Pair;
+use EndouMame\PhpValueObject\Fixers\Collection\LimitedMap;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
-use EndouMame\PhpValueObject\Collection\Pair;
-use EndouMame\PhpValueObject\Examples\Collection\LimitedMap;
 
 #[TestDox('LimitedMapクラスのテスト')]
 #[CoversClass(LimitedMap::class)]

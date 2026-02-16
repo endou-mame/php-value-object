@@ -8,7 +8,7 @@ use BcMath\Number;
 use DivisionByZeroError;
 use EndouMame\PhpMonad\Result;
 use EndouMame\PhpValueObject\Error\ValueObjectError;
-use EndouMame\PhpValueObject\Examples\Number\Decimal\TestDecimalValue;
+use EndouMame\PhpValueObject\Fixers\Number\Decimal\TestDecimalValue;
 use EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase;
 use EndouMame\PhpValueObject\Number\DecimalValue;
 use EndouMame\PhpValueObject\Tests\TestCase;

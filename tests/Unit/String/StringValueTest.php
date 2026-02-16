@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace EndouMame\PhpValueObject\Tests\Unit\String;
 
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Fixers\String\TestStringValue;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
-use EndouMame\PhpValueObject\Error\ValueObjectError;
-use EndouMame\PhpValueObject\Examples\String\TestStringValue;
 
 #[TestDox('StringValueクラスのテスト')]
 #[CoversClass(TestStringValue::class)]
@@ -68,21 +68,8 @@ final class StringValueTest extends TestCase
         $this->assertStringContainsString('50文字以下', $errorMessage);
     }
 
-    /**
-     * @return array<string, array{string}>
-     */
-    public static function 無効な文字列のパターンを提供(): array
-    {
-        return [
-            '記号のみ' => ['@#$%^&*'],
-            'スラッシュを含む' => ['山田/太郎'],
-            'バックスラッシュを含む' => ['山田\太郎'],
-            '特殊文字を含む' => ['山田\s太郎'],
-        ];
-    }
-
     #[Test]
-    #[DataProvider('無効な文字列のパターンを提供')]
+    #[DataProvider('provide正規表現に一致しない値はエラーになるCases')]
     public function 正規表現に一致しない値はエラーになる(string $invalidValue): void
     {
         $result = TestStringValue::tryFrom($invalidValue);
@@ -97,7 +84,30 @@ final class StringValueTest extends TestCase
     /**
      * @return array<string, array{string}>
      */
-    public static function 有効な文字列のパターンを提供(): array
+    public static function provide正規表現に一致しない値はエラーになるCases(): iterable
+    {
+        return [
+            '記号のみ' => ['@#$%^&*'],
+            'スラッシュを含む' => ['山田/太郎'],
+            'バックスラッシュを含む' => ['山田\太郎'],
+            '特殊文字を含む' => ['山田\s太郎'],
+        ];
+    }
+
+    #[Test]
+    #[DataProvider('provide正規表現に一致する値はインスタンスが作成できるCases')]
+    public function 正規表現に一致する値はインスタンスが作成できる(string $validValue): void
+    {
+        $result = TestStringValue::tryFrom($validValue);
+
+        $this->assertTrue($result->isOk());
+        $this->assertEquals($validValue, $result->unwrap()->value);
+    }
+
+    /**
+     * @return array<string, array{string}>
+     */
+    public static function provide正規表現に一致する値はインスタンスが作成できるCases(): iterable
     {
         return [
             '漢字' => ['山田太郎'],
@@ -107,16 +117,6 @@ final class StringValueTest extends TestCase
             '数字' => ['1234567890'],
             'スペースを含む' => ['山田 太郎'],
         ];
-    }
-
-    #[Test]
-    #[DataProvider('有効な文字列のパターンを提供')]
-    public function 正規表現に一致する値はインスタンスが作成できる(string $validValue): void
-    {
-        $result = TestStringValue::tryFrom($validValue);
-
-        $this->assertTrue($result->isOk());
-        $this->assertEquals($validValue, $result->unwrap()->value);
     }
 
     #[Test]

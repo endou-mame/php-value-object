@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EndouMame\PhpValueObject\Examples\Collection;
+namespace EndouMame\PhpValueObject\Fixers\Collection;
 
 use EndouMame\PhpValueObject\Collection\ArrayList;
 use Override;

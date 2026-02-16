@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace EndouMame\PhpValueObject\Tests\Unit\String;
 
 use DateTimeImmutable;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Fixers\String\TestUlidValue;
+use EndouMame\PhpValueObject\String\Ulid;
+use EndouMame\PhpValueObject\Tests\TestCase;
 use Error;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -12,10 +16,6 @@ use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
-use EndouMame\PhpValueObject\Error\ValueObjectError;
-use EndouMame\PhpValueObject\Examples\String\TestUlidValue;
-use EndouMame\PhpValueObject\String\Ulid;
-use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * UlidValueクラスのテスト
@@ -150,6 +150,16 @@ final class UlidValueTest extends TestCase
         $this->assertEquals($validUlid, $ulidValue->value);
     }
 
+    #[Test]
+    #[DataProvider('provide無効なULIDはエラーになるCases')]
+    public function 無効なULIDはエラーになる(string $invalidUlid): void
+    {
+        $result = TestUlidValue::tryFrom($invalidUlid);
+
+        $this->assertFalse($result->isOk());
+        $this->assertInstanceOf(ValueObjectError::class, $result->unwrapErr());
+    }
+
     // ------------------------------------------
     // バリデーションのテスト
     // ------------------------------------------
@@ -157,7 +167,7 @@ final class UlidValueTest extends TestCase
     /**
      * @return array<string, array{string}>
      */
-    public static function 無効なULIDのパターンを提供(): array
+    public static function provide無効なULIDはエラーになるCases(): iterable
     {
         return [
             '空文字' => [''],
@@ -166,16 +176,6 @@ final class UlidValueTest extends TestCase
             '無効な文字を含む' => ['01H34J1XAQX0VBW6G6ZK22HCIO'], // 'O'は無効
             '小文字を含む' => ['01h34J1XAQX0VBW6G6ZK22HC1K'], // 小文字は無効
         ];
-    }
-
-    #[Test]
-    #[DataProvider('無効なULIDのパターンを提供')]
-    public function 無効なULIDはエラーになる(string $invalidUlid): void
-    {
-        $result = TestUlidValue::tryFrom($invalidUlid);
-
-        $this->assertFalse($result->isOk());
-        $this->assertInstanceOf(ValueObjectError::class, $result->unwrapErr());
     }
 
     // ------------------------------------------

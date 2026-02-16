@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace EndouMame\PhpValueObject\Examples\Number\Integer;
+namespace EndouMame\PhpValueObject\Fixers\Number\Integer;
 
-use Override;
 use EndouMame\PhpValueObject\Number\NegativeIntegerValue;
 use EndouMame\PhpValueObject\ValueObjectMeta;
+use Override;
 
 /**
  * NegativeIntegerValue抽象クラスのテスト用実装

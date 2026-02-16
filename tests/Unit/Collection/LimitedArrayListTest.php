@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace EndouMame\PhpValueObject\Tests\Unit\Collection;
 
+use EndouMame\PhpValueObject\Fixers\Collection\LimitedArrayList;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
-use EndouMame\PhpValueObject\Examples\Collection\LimitedArrayList;
 
 #[TestDox('LimitedArrayListクラスのテスト')]
 #[CoversClass(LimitedArrayList::class)]

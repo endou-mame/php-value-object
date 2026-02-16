@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EndouMame\PhpValueObject\Examples\Boolean;
+namespace EndouMame\PhpValueObject\Fixers\Boolean;
 
 use EndouMame\PhpValueObject\Boolean\BooleanValue;
 use EndouMame\PhpValueObject\ValueObjectMeta;
