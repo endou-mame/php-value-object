@@ -6,16 +6,16 @@ namespace EndouMame\PhpValueObject\Tests\Unit\Number\Decimal;
 
 use AssertionError;
 use BcMath\Number;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Number\Decimal\TestPositiveDecimalValue;
+use EndouMame\PhpValueObject\Number\PositiveDecimalValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
-use EndouMame\PhpValueObject\Error\ValueObjectError;
-use EndouMame\PhpValueObject\Examples\Number\Decimal\TestPositiveDecimalValue;
-use EndouMame\PhpValueObject\Number\PositiveDecimalValue;
-use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * PositiveDecimalValue抽象クラスのテスト
@@ -58,8 +58,8 @@ final class PositiveDecimalValueTest extends TestCase
     }
 
     /**
-     * @param string $value      テスト対象の値
-     * @param bool   $shouldBeOk 成功するべきかどうか
+     * @param numeric-string $value      テスト対象の値
+     * @param bool           $shouldBeOk 成功するべきかどうか
      */
     #[Test]
     #[DataProvider('provide境界値テストCases')]

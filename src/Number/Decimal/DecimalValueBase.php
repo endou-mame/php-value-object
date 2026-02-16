@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace EndouMame\PhpValueObject\Number\Decimal;
 
 use BcMath\Number;
-use Override;
-use Stringable;
 use EndouMame\PhpMonad\Result;
 use EndouMame\PhpValueObject\Error\ValueObjectError;
 use EndouMame\PhpValueObject\IValueObject;
 use EndouMame\PhpValueObject\Utils;
+use Override;
+use Stringable;
 
 /**
  * 少数の値オブジェクトの基底クラス
@@ -147,12 +147,18 @@ abstract readonly class DecimalValueBase implements IValueObject, Stringable, IA
     /**
      * 小数点以下の桁数を指定してフォーマットする
      * @param positive-int|0|null $decimals 小数点以下の桁数
+     *
+     * @return numeric-string
      */
     final public function format(?int $decimals = null): string
     {
         $d = $decimals ?? static::scale();
 
-        return sprintf("%.{$d}f", (string)$this->value);
+        $formatted = sprintf("%.{$d}f", (string)$this->value);
+
+        assert(is_numeric($formatted), 'Bcmath\Numberは常に有限値なので、これは常に成功する');
+
+        return $formatted;
     }
 
     /**

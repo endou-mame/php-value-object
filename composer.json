@@ -14,7 +14,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "EndouMame\\PhpValueObject\\Tests\\": "tests"
+            "EndouMame\\PhpValueObject\\Tests\\": "tests",
+            "EndouMame\\PhpValueObject\\Examples\\": "tests/fixers"
         }
     },
     "authors": [

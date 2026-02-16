@@ -6,6 +6,12 @@ namespace EndouMame\PhpValueObject\Tests\Unit\Number\Decimal;
 
 use BcMath\Number;
 use DivisionByZeroError;
+use EndouMame\PhpMonad\Result;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Number\Decimal\TestDecimalValue;
+use EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase;
+use EndouMame\PhpValueObject\Number\DecimalValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 use Error;
 use Exception;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -14,12 +20,6 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use ReflectionClass;
 use Throwable;
-use EndouMame\PhpMonad\Result;
-use EndouMame\PhpValueObject\Error\ValueObjectError;
-use EndouMame\PhpValueObject\Examples\Number\Decimal\TestDecimalValue;
-use EndouMame\PhpValueObject\Number\Decimal\DecimalValueBase;
-use EndouMame\PhpValueObject\Number\DecimalValue;
-use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * DecimalValue抽象クラスのテスト
@@ -96,9 +96,21 @@ final class DecimalValueTest extends TestCase
     }
 
     /**
+     * @param numeric-string $validValue
+     */
+    #[Test]
+    #[DataProvider('provide有効な値はインスタンスが作成できるCases')]
+    public function 有効な値はインスタンスが作成できる(string $validValue): void
+    {
+        $result = TestDecimalValue::tryFrom(new Number($validValue));
+        $this->assertTrue($result->isOk());
+        $this->assertEquals($validValue, (string)$result->unwrap()->value);
+    }
+
+    /**
      * @return array<string, array{string}>
      */
-    public static function 有効な値のパターンを提供(): array
+    public static function provide有効な値はインスタンスが作成できるCases(): iterable
     {
         return [
             '整数_正' => ['100'],
@@ -113,33 +125,27 @@ final class DecimalValueTest extends TestCase
         ];
     }
 
-    #[Test]
-    #[DataProvider('有効な値のパターンを提供')]
-    public function 有効な値はインスタンスが作成できる(string $validValue): void
-    {
-        $result = TestDecimalValue::tryFrom(new Number($validValue));
-        $this->assertTrue($result->isOk());
-        $this->assertEquals($validValue, (string)$result->unwrap()->value);
-    }
-
     /**
-     * @return array<string, array{string}>
+     * @param numeric-string $invalidValue
      */
-    public static function 無効な値のパターンを提供(): array
-    {
-        return [
-            '最小値未満' => ['-1000.01'],
-            '最大値超過' => ['1000.01'],
-        ];
-    }
-
     #[Test]
-    #[DataProvider('無効な値のパターンを提供')]
+    #[DataProvider('provide無効な値はエラーになるCases')]
     public function 無効な値はエラーになる(string $invalidValue): void
     {
         $result = TestDecimalValue::tryFrom(new Number($invalidValue));
         $this->assertFalse($result->isOk());
         $this->assertInstanceOf(ValueObjectError::class, $result->unwrapErr());
+    }
+
+    /**
+     * @return array<string, array{string}>
+     */
+    public static function provide無効な値はエラーになるCases(): iterable
+    {
+        return [
+            '最小値未満' => ['-1000.01'],
+            '最大値超過' => ['1000.01'],
+        ];
     }
 
     // ------------------------------------------
@@ -195,7 +201,6 @@ final class DecimalValueTest extends TestCase
         $result1 = TestDecimalValue::tryFrom(new Number('123.45'));
         $this->assertTrue($result1->isOk());
         $this->assertEquals('123.45', (string)$result1->unwrap()->value);
-
 
         // 無効な値（範囲外）
         $result3 = TestDecimalValue::tryFrom(new Number('1001'));
@@ -305,37 +310,14 @@ final class DecimalValueTest extends TestCase
     }
 
     /**
-     * @return array<string, array{0: string, 1: string, 2: string, 3: string|null, 4: bool}>
-     */
-    public static function 算術演算のデータを提供(): array
-    {
-        return [
-            '加算_正常' => ['100.50', '200.25', 'add', '300.75', true],
-            // 範囲内になるように調整
-            '加算_大きな値' => ['400', '500', 'add', '900', true],
-            '減算_正常' => ['200.50', '100.25', 'sub', '100.25', true],
-            '乗算_正常' => ['100.50', '2', 'mul', '201.00', true],
-            '乗算_大きな値' => ['300', '3', 'mul', '900', true],
-            '除算_正常' => ['100.50', '2', 'div', '50.25', true],
-            '除算_ゼロ除算' => ['100.50', '0', 'div', null, false],
-            '除算_ゼロ除算_負の値' => ['-100.50', '0', 'div', null, false],
-            // 範囲外になるように調整
-            '加算_範囲外' => ['900', '200', 'add', null, false],
-            '減算_範囲外' => ['-1000', '200', 'sub', null, false],
-            '乗算_範囲外' => ['1000', '2', 'mul', null, false],
-            '除算_範囲外' => ['1000', '0.5', 'div', null, false],
-        ];
-    }
-
-    /**
-     * @param string      $value1        最初の値
-     * @param string      $value2        次の値
-     * @param string      $operation     演算子（add, sub, mul, div）
-     * @param string|null $expected      期待される結果値（エラーの場合はnull）
-     * @param bool        $shouldSucceed 演算が成功するべきかどうか
+     * @param numeric-string $value1        最初の値
+     * @param numeric-string $value2        次の値
+     * @param string         $operation     演算子（add, sub, mul, div）
+     * @param string|null    $expected      期待される結果値（エラーの場合はnull）
+     * @param bool           $shouldSucceed 演算が成功するべきかどうか
      */
     #[Test]
-    #[DataProvider('算術演算のデータを提供')]
+    #[DataProvider('provide算術演算メソッドのテストCases')]
     public function 算術演算メソッドのテスト(
         string $value1,
         string $value2,
@@ -397,6 +379,29 @@ final class DecimalValueTest extends TestCase
         }
     }
 
+    /**
+     * @return array<string, array{0: string, 1: string, 2: string, 3: string|null, 4: bool}>
+     */
+    public static function provide算術演算メソッドのテストCases(): iterable
+    {
+        return [
+            '加算_正常' => ['100.50', '200.25', 'add', '300.75', true],
+            // 範囲内になるように調整
+            '加算_大きな値' => ['400', '500', 'add', '900', true],
+            '減算_正常' => ['200.50', '100.25', 'sub', '100.25', true],
+            '乗算_正常' => ['100.50', '2', 'mul', '201.00', true],
+            '乗算_大きな値' => ['300', '3', 'mul', '900', true],
+            '除算_正常' => ['100.50', '2', 'div', '50.25', true],
+            '除算_ゼロ除算' => ['100.50', '0', 'div', null, false],
+            '除算_ゼロ除算_負の値' => ['-100.50', '0', 'div', null, false],
+            // 範囲外になるように調整
+            '加算_範囲外' => ['900', '200', 'add', null, false],
+            '減算_範囲外' => ['-1000', '200', 'sub', null, false],
+            '乗算_範囲外' => ['1000', '2', 'mul', null, false],
+            '除算_範囲外' => ['1000', '0.5', 'div', null, false],
+        ];
+    }
+
     // ------------------------------------------
     // 比較演算のテスト
     // ------------------------------------------
@@ -430,27 +435,15 @@ final class DecimalValueTest extends TestCase
     }
 
     /**
-     * @return array<string, array{0: string, 1: string, 2: bool, 3: bool, 4: bool, 5: bool}>
-     */
-    public static function 比較演算のデータを提供(): array
-    {
-        return [
-            '等しい値' => ['100.50', '100.50', false, true, false, true],
-            '大きい値と小さい値' => ['200.75', '100.50', true, true, false, false],
-            '小さい値と大きい値' => ['100.50', '200.75', false, false, true, true],
-        ];
-    }
-
-    /**
-     * @param string $value1    最初の値
-     * @param string $value2    次の値
-     * @param bool   $expectGt  value1 > value2 の期待値
-     * @param bool   $expectGte value1 >= value2 の期待値
-     * @param bool   $expectLt  value1 < value2 の期待値
-     * @param bool   $expectLte value1 <= value2 の期待値
+     * @param numeric-string $value1    最初の値
+     * @param numeric-string $value2    次の値
+     * @param bool           $expectGt  value1 > value2 の期待値
+     * @param bool           $expectGte value1 >= value2 の期待値
+     * @param bool           $expectLt  value1 < value2 の期待値
+     * @param bool           $expectLte value1 <= value2 の期待値
      */
     #[Test]
-    #[DataProvider('比較演算のデータを提供')]
+    #[DataProvider('provide比較演算メソッドのテストCases')]
     public function 比較演算メソッドのテスト(
         string $value1,
         string $value2,
@@ -466,6 +459,18 @@ final class DecimalValueTest extends TestCase
         $this->assertSame($expectGte, $decimal1->gte($decimal2), "{$value1} >= {$value2}");
         $this->assertSame($expectLt, $decimal1->lt($decimal2), "{$value1} < {$value2}");
         $this->assertSame($expectLte, $decimal1->lte($decimal2), "{$value1} <= {$value2}");
+    }
+
+    /**
+     * @return array<string, array{0: string, 1: string, 2: bool, 3: bool, 4: bool, 5: bool}>
+     */
+    public static function provide比較演算メソッドのテストCases(): iterable
+    {
+        return [
+            '等しい値' => ['100.50', '100.50', false, true, false, true],
+            '大きい値と小さい値' => ['200.75', '100.50', true, true, false, false],
+            '小さい値と大きい値' => ['100.50', '200.75', false, false, true, true],
+        ];
     }
 
     #[Test]
@@ -685,24 +690,11 @@ final class DecimalValueTest extends TestCase
     }
 
     /**
-     * @return array<string, array{string, bool}>
+     * @param numeric-string $value         テスト対象の値
+     * @param bool           $shouldSucceed 値が有効であるべき
      */
-    public static function tryFrom用のテストデータを提供(): array
-    {
-        return [
-            '有効な正の値' => ['100.50', true],
-            '有効な負の値' => ['-100.50', true],
-            '有効なゼロ値' => ['0', true],
-            '有効な最小値' => ['-1000', true],
-            '有効な最大値' => ['1000', true],
-            '無効な最小値未満' => ['-1000.01', false],
-            '無効な最大値超過' => ['1000.01', false],
-            '有効桁数内の値' => ['123.456789', true],
-        ];
-    }
-
     #[Test]
-    #[DataProvider('tryFrom用のテストデータを提供')]
+    #[DataProvider('provideTryFromメソッドのデータ駆動テストCases')]
     public function tryFromメソッドのデータ駆動テスト(string $value, bool $shouldSucceed): void
     {
         $result = TestDecimalValue::tryFrom(new Number($value));
@@ -714,6 +706,23 @@ final class DecimalValueTest extends TestCase
             $this->assertFalse($result->isOk(), "値 {$value} は無効であるべき");
             $this->assertInstanceOf(ValueObjectError::class, $result->unwrapErr());
         }
+    }
+
+    /**
+     * @return array<string, array{string, bool}>
+     */
+    public static function provideTryFromメソッドのデータ駆動テストCases(): iterable
+    {
+        return [
+            '有効な正の値' => ['100.50', true],
+            '有効な負の値' => ['-100.50', true],
+            '有効なゼロ値' => ['0', true],
+            '有効な最小値' => ['-1000', true],
+            '有効な最大値' => ['1000', true],
+            '無効な最小値未満' => ['-1000.01', false],
+            '無効な最大値超過' => ['1000.01', false],
+            '有効桁数内の値' => ['123.456789', true],
+        ];
     }
 
     #[Test]
@@ -735,6 +744,41 @@ final class DecimalValueTest extends TestCase
         $this->assertEquals('123.4560', (string)$longFormatted);
     }
 
+    /**
+     * format関数のテスト
+     *
+     * @param numeric-string      $value    テスト対象の値
+     * @param positive-int|0|null $decimals 小数点以下の桁数
+     * @param string              $expected 期待される結果
+     */
+    #[Test]
+    #[DataProvider('フォーマット用データを提供')]
+    public function format関数の詳細テスト(string $value, ?int $decimals, string $expected): void
+    {
+        $decimalValue = TestDecimalValue::from(new Number($value));
+        $result = $decimalValue->format($decimals);
+
+        $this->assertEquals($expected, $result, "値 {$value} を小数点以下 {$decimals} 桁でフォーマットした結果が期待値と一致しない");
+    }
+
+    /**
+     * formatToNumber関数のテスト
+     *
+     * @param numeric-string      $value    テスト対象の値
+     * @param positive-int|0|null $decimals 小数点以下の桁数
+     * @param string              $expected 期待される結果
+     */
+    #[Test]
+    #[DataProvider('フォーマット用データを提供')]
+    public function formatToNumber関数の詳細テスト(string $value, ?int $decimals, string $expected): void
+    {
+        $decimalValue = TestDecimalValue::from(new Number($value));
+        $result = $decimalValue->formatToNumber($decimals);
+
+        $this->assertInstanceOf(Number::class, $result);
+        $this->assertEquals($expected, (string)$result, "値 {$value} を小数点以下 {$decimals} 桁でフォーマットした結果が期待値と一致しない");
+    }
+
     // ------------------------------------------
     // format関数とformatToNumber関数の詳細テスト
     // ------------------------------------------
@@ -742,7 +786,7 @@ final class DecimalValueTest extends TestCase
     /**
      * @return array<string, array{string, positive-int|0|null, string}>
      */
-    public static function フォーマット用データを提供(): array
+    public static function フォーマット用データを提供(): iterable
     {
         return [
             '整数値_デフォルトスケール' => ['100', null, '100.00'],
@@ -771,41 +815,6 @@ final class DecimalValueTest extends TestCase
             '最小値に近い値' => ['-999.999', 2, '-1000.00'],
             '最大値に近い値' => ['999.999', 2, '1000.00'],
         ];
-    }
-
-    /**
-     * format関数のテスト
-     *
-     * @param string              $value    テスト対象の値
-     * @param positive-int|0|null $decimals 小数点以下の桁数
-     * @param string              $expected 期待される結果
-     */
-    #[Test]
-    #[DataProvider('フォーマット用データを提供')]
-    public function format関数の詳細テスト(string $value, ?int $decimals, string $expected): void
-    {
-        $decimalValue = TestDecimalValue::from(new Number($value));
-        $result = $decimalValue->format($decimals);
-
-        $this->assertEquals($expected, $result, "値 {$value} を小数点以下 {$decimals} 桁でフォーマットした結果が期待値と一致しない");
-    }
-
-    /**
-     * formatToNumber関数のテスト
-     *
-     * @param string              $value    テスト対象の値
-     * @param positive-int|0|null $decimals 小数点以下の桁数
-     * @param string              $expected 期待される結果
-     */
-    #[Test]
-    #[DataProvider('フォーマット用データを提供')]
-    public function formatToNumber関数の詳細テスト(string $value, ?int $decimals, string $expected): void
-    {
-        $decimalValue = TestDecimalValue::from(new Number($value));
-        $result = $decimalValue->formatToNumber($decimals);
-
-        $this->assertInstanceOf(Number::class, $result);
-        $this->assertEquals($expected, (string)$result, "値 {$value} を小数点以下 {$decimals} 桁でフォーマットした結果が期待値と一致しない");
     }
 
     #[Test]
@@ -888,24 +897,11 @@ final class DecimalValueTest extends TestCase
     }
 
     /**
-     * @return array<string, array{string, bool}>
+     * @param numeric-string $value         テスト対象の値
+     * @param bool           $shouldSucceed 演算が成功するべきか
      */
-    public static function isValidDigits用のテストデータを提供(): array
-    {
-        return [
-            '有効な桁数_1桁' => ['1', true],
-            '有効な桁数_2桁' => ['12', true],
-            '有効な桁数_小数点含む' => ['123.456', true],
-            '有効な桁数_負数' => ['-123.456', true],
-            '有効な桁数_ゼロ' => ['0', true],
-            '有効な桁数_小数点のみ' => ['1.0', true],
-            '無効な桁数_大きな小数' => ['1.' . str_repeat('9', 29), false],
-            '無効な桁数_大きな負数' => ['-1.' . str_repeat('9', 29), false],
-        ];
-    }
-
     #[Test]
-    #[DataProvider('isValidDigits用のテストデータを提供')]
+    #[DataProvider('provideIsValidDigitsメソッドのデータ駆動テストCases')]
     public function isValidDigitsメソッドのデータ駆動テスト(string $value, bool $shouldSucceed): void
     {
         $result = TestDecimalValue::tryFrom(new Number($value));
@@ -919,6 +915,23 @@ final class DecimalValueTest extends TestCase
             $errorMessage = $result->unwrapErr()->getMessage();
             $this->assertStringContainsString('桁数', $errorMessage);
         }
+    }
+
+    /**
+     * @return array<string, array{string, bool}>
+     */
+    public static function provideIsValidDigitsメソッドのデータ駆動テストCases(): iterable
+    {
+        return [
+            '有効な桁数_1桁' => ['1', true],
+            '有効な桁数_2桁' => ['12', true],
+            '有効な桁数_小数点含む' => ['123.456', true],
+            '有効な桁数_負数' => ['-123.456', true],
+            '有効な桁数_ゼロ' => ['0', true],
+            '有効な桁数_小数点のみ' => ['1.0', true],
+            '無効な桁数_大きな小数' => ['1.' . str_repeat('9', 29), false],
+            '無効な桁数_大きな負数' => ['-1.' . str_repeat('9', 29), false],
+        ];
     }
 
     #[Test]
@@ -1010,9 +1023,30 @@ final class DecimalValueTest extends TestCase
     }
 
     /**
+     * @param numeric-string $value      テスト対象の値
+     * @param bool           $expectZero isZeroの期待値
+     * @param bool           $expectPos  isPositiveの期待値
+     * @param bool           $expectNeg  isNegativeの期待値
+     */
+    #[Test]
+    #[DataProvider('provide正負判定メソッドのデータ駆動テストCases')]
+    public function 正負判定メソッドのデータ駆動テスト(
+        string $value,
+        bool $expectZero,
+        bool $expectPos,
+        bool $expectNeg
+    ): void {
+        $decimalValue = TestDecimalValue::from(new Number($value));
+
+        $this->assertSame($expectZero, $decimalValue->isZero(), "値 {$value} のisZero()結果が期待値と異なる");
+        $this->assertSame($expectPos, $decimalValue->isPositive(), "値 {$value} のisPositive()結果が期待値と異なる");
+        $this->assertSame($expectNeg, $decimalValue->isNegative(), "値 {$value} のisNegative()結果が期待値と異なる");
+    }
+
+    /**
      * @return array<string, array{string, bool, bool, bool}>
      */
-    public static function 正負判定用のテストデータを提供(): array
+    public static function provide正負判定メソッドのデータ駆動テストCases(): iterable
     {
         return [
             '正の整数' => ['100', false, true, false],
@@ -1026,26 +1060,5 @@ final class DecimalValueTest extends TestCase
             '大きな正の値' => ['999.99', false, true, false],
             '大きな負の値' => ['-999.99', false, false, true],
         ];
-    }
-
-    /**
-     * @param string $value      テスト対象の値
-     * @param bool   $expectZero isZeroの期待値
-     * @param bool   $expectPos  isPositiveの期待値
-     * @param bool   $expectNeg  isNegativeの期待値
-     */
-    #[Test]
-    #[DataProvider('正負判定用のテストデータを提供')]
-    public function 正負判定メソッドのデータ駆動テスト(
-        string $value,
-        bool $expectZero,
-        bool $expectPos,
-        bool $expectNeg
-    ): void {
-        $decimalValue = TestDecimalValue::from(new Number($value));
-
-        $this->assertSame($expectZero, $decimalValue->isZero(), "値 {$value} のisZero()結果が期待値と異なる");
-        $this->assertSame($expectPos, $decimalValue->isPositive(), "値 {$value} のisPositive()結果が期待値と異なる");
-        $this->assertSame($expectNeg, $decimalValue->isNegative(), "値 {$value} のisNegative()結果が期待値と異なる");
     }
 }

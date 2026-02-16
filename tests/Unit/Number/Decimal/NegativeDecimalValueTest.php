@@ -6,17 +6,17 @@ namespace EndouMame\PhpValueObject\Tests\Unit\Number\Decimal;
 
 use AssertionError;
 use BcMath\Number;
+use EndouMame\PhpValueObject\Error\ValueObjectError;
+use EndouMame\PhpValueObject\Examples\Number\Decimal\TestNegativeDecimalValue;
+use EndouMame\PhpValueObject\Examples\Number\Decimal\TestPositiveDecimalValue;
+use EndouMame\PhpValueObject\Number\NegativeDecimalValue;
+use EndouMame\PhpValueObject\Tests\TestCase;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestDox;
 use Throwable;
-use EndouMame\PhpValueObject\Error\ValueObjectError;
-use EndouMame\PhpValueObject\Examples\Number\Decimal\TestNegativeDecimalValue;
-use EndouMame\PhpValueObject\Examples\Number\Decimal\TestPositiveDecimalValue;
-use EndouMame\PhpValueObject\Number\NegativeDecimalValue;
-use EndouMame\PhpValueObject\Tests\TestCase;
 
 /**
  * NegativeDecimalValue抽象クラスのテスト
@@ -59,8 +59,8 @@ final class NegativeDecimalValueTest extends TestCase
     }
 
     /**
-     * @param string $value      テスト対象の値
-     * @param bool   $shouldBeOk 成功するべきかどうか
+     * @param numeric-string $value      テスト対象の値
+     * @param bool           $shouldBeOk 成功するべきかどうか
      */
     #[Test]
     #[DataProvider('provide境界値テストCases')]
